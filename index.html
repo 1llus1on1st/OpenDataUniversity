@@ -668,13 +668,19 @@ const TRAVAUX_CATALOGUE=[
   {id:"heating",title:"Remplacement du chauffage (PAC)",desc:"Une pompe à chaleur air/eau est nettement plus efficace que des convecteurs ou une chaudière standard.",costPerM2Low:60,costPerM2High:110,gain:30,gainFactor:0.18,priority:"high",condition:d=>d.heating>0.90},
   {id:"ventilation",title:"Amélioration de la ventilation",desc:"Une VMC double-flux réduit les pertes liées au renouvellement d'air.",costPerM2Low:20,costPerM2High:45,gain:8,gainFactor:0.06,priority:"low",condition:d=>d.ventilation>0.97},
   {id:"hotWater",title:"Chauffe-eau thermodynamique",desc:"Divise par 3 la consommation électrique liée à l'ECS par rapport à un ballon standard.",costPerM2Low:10,costPerM2High:25,gain:12,gainFactor:0.04,priority:"med",condition:d=>d.hotWater>20},
+  {id:"solarpv",title:"Panneaux solaires",desc:"Installation d'une production photovoltaïque ou complément d'une installation partielle pour réduire la consommation nette achetée.",costPerM2Low:35,costPerM2High:85,gain:18,gainFactor:0.08,priority:"low",condition:d=>d.type==="maison" && d.solarGain<30},
 ];
 
 function computeCost(t, surface){
+  let low=t.costPerM2Low, high=t.costPerM2High;
+  if(t.id==="solarpv" && lastData && lastData.solarGain>0){
+    low = Math.round(low * 0.55);
+    high = Math.round(high * 0.60);
+  }
   return {
-    low: Math.round(t.costPerM2Low * surface),
-    high: Math.round(t.costPerM2High * surface),
-    mid: Math.round((t.costPerM2Low + t.costPerM2High) / 2 * surface)
+    low: Math.round(low * surface),
+    high: Math.round(high * surface),
+    mid: Math.round((low + high) / 2 * surface)
   };
 }
 
