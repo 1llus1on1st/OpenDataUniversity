@@ -51,6 +51,7 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .dpe-target-btns{display:flex;gap:8px;flex-wrap:wrap}
 .dpe-target-btns button{padding:6px 11px;border-radius:9px;font-size:13px;font-weight:700;color:#fff;border:none;cursor:pointer;opacity:.55;transition:.15s}
 .dpe-target-btns button.selected{opacity:1;outline:3px solid var(--text);outline-offset:2px}
+.target-note{display:none;margin-top:10px;padding:10px 12px;border-radius:10px;background:#fff4f0;border:1px solid #f4c3ae;color:#9a3412;font-size:12px;line-height:1.45}
 /* ── STRENGTHS / WEAKNESSES ── */
 .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .sw-box{border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5}
@@ -148,6 +149,12 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
       <div class="field">
         <label for="surface">Surface habitable (m²)</label>
         <input id="surface" type="number" min="10" step="1" value="60" oninput="calculateDPE()" />
+      </div>
+
+      <div class="field">
+        <label for="ceilingHeight">Hauteur sous plafond (m)</label>
+        <input id="ceilingHeight" type="number" min="2.0" max="5.0" step="0.1" value="2.5" oninput="calculateDPE()" />
+        <div class="hint">2,5 m correspond à une hauteur standard. Au-dessus, le volume chauffé augmente.</div>
       </div>
 
       <div class="field">
@@ -369,6 +376,16 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
         <div class="hint">Le solaire réduit ici la consommation nette de façon indicative.</div>
       </div>
 
+      <div class="field show-if-house">
+        <label for="mitoyennete">Mitoyenneté</label>
+        <select id="mitoyennete" onchange="calculateDPE()">
+          <option value="1.10" selected>Maison isolée</option>
+          <option value="1.00">Mitoyenne sur 1 côté</option>
+          <option value="0.92">Mitoyenne sur 2 côtés</option>
+        </select>
+        <div class="hint">Moins il y a de façades directement exposées, moins les déperditions sont importantes.</div>
+      </div>
+
       <div class="field full">
         <div class="actions">
           <button class="btn-secondary" type="button" onclick="resetForm()">Réinitialiser</button>
@@ -415,6 +432,7 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
       <div class="dpe-target-section">
         <label>Classe DPE cible</label>
         <div class="dpe-target-btns" id="targetBtns"></div>
+        <div class="target-note" id="targetNote"></div>
       </div>
       <div class="dpe-final-box" id="dpeFinalBox" style="display:none">
         <div class="label">DPE estimé après travaux sélectionnés</div>
@@ -573,9 +591,14 @@ function collectData(){
   const compactnessFactor=type==="appartement"?0.94:1.08;
   const apartmentFloorFactor=type==="appartement"?Number(document.getElementById("apartmentFloor").value||1):1;
   const solarGain=type==="maison"?Number(document.getElementById("solar").value||0):0;
+  const mitoyenneteFactor=type==="maison"?Number(document.getElementById("mitoyennete").value||1.10):1;
+  const ceilingHeight=Number(document.getElementById("ceilingHeight").value||2.5);
+  const ceilingHeightFactor=Math.max(0.9, Math.min(1.5, ceilingHeight/2.5));
   return {
     type,
     surface:Number(document.getElementById("surface").value||60),
+    ceilingHeight,
+    ceilingHeightFactor,
     climate:getClimateFactor(),
     heating:Number(document.getElementById("heating").value||1),
     hotWater:Number(document.getElementById("hotWater").value||24),
@@ -585,13 +608,13 @@ function collectData(){
     windows:Number(document.getElementById("windows").value||1),
     ventilation:Number(document.getElementById("ventilation").value||1),
     facades:Number(document.getElementById("facades").value||1),
-    yearFactor, compactnessFactor, apartmentFloorFactor, solarGain
+    yearFactor, compactnessFactor, apartmentFloorFactor, solarGain, mitoyenneteFactor
   };
 }
 
 function computeConsumption(d){
   const baseNeed=125;
-  const envelope=d.yearFactor*d.climate*d.walls*d.roof*d.floorIns*d.windows*d.ventilation*d.facades*d.compactnessFactor*d.apartmentFloorFactor;
+  const envelope=d.yearFactor*d.climate*d.walls*d.roof*d.floorIns*d.windows*d.ventilation*d.facades*d.compactnessFactor*d.apartmentFloorFactor*d.ceilingHeightFactor*d.mitoyenneteFactor;
   return Math.round(Math.max(40, baseNeed*envelope*d.heating+d.hotWater+16-d.solarGain));
 }
 
@@ -610,8 +633,12 @@ function getStrengthsWeaknesses(d){
   if(d.ventilation<=0.96) strengths.push("Ventilation maîtrisée");
   else if(d.ventilation>1.04) weaknesses.push("Ventilation peu maîtrisée");
   if(d.type==="maison" && d.solarGain>0) strengths.push("Production solaire réduisant la consommation nette");
+  if(d.type==="maison" && d.mitoyenneteFactor < 1.02) strengths.push("Mitoyenneté favorable limitant les surfaces exposées.");
   if(d.type==="appartement" && d.apartmentFloorFactor<1) strengths.push("Étage intermédiaire thermiquement favorable");
   else if(d.type==="appartement" && d.apartmentFloorFactor>1.02) weaknesses.push("Position du logement moins favorable (RdC ou dernier étage)");
+  if(d.type==="maison" && d.mitoyenneteFactor >= 1.08) weaknesses.push("Maison isolée : davantage de surfaces déperditives exposées.");
+  if(d.ceilingHeight <= 2.4) strengths.push("Hauteur sous plafond contenue, donc volume chauffé plutôt favorable.");
+  else if(d.ceilingHeight >= 2.9) weaknesses.push("Hauteur sous plafond élevée : volume chauffé plus important.");
   if(!strengths.length) strengths.push("Aucun point fort identifié dans cette simulation");
   if(!weaknesses.length) weaknesses.push("Aucun point faible majeur identifié");
   return {strengths, weaknesses};
@@ -677,10 +704,10 @@ function evaluateSelection(applicable, selectedIds){
 }
 
 function getCheapestTargetSelection(applicable){
-  if(!targetDPE) return {};
+  if(!targetDPE) return {autoChecked:{}, attainable:true};
   const targetIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===targetDPE);
   const currentIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===lastDPE);
-  if(targetIdx<0 || currentIdx<0 || targetIdx>=currentIdx) return {};
+  if(targetIdx<0 || currentIdx<0 || targetIdx>=currentIdx) return {autoChecked:{}, attainable:true};
 
   let best=null;
   const n=applicable.length;
@@ -712,8 +739,9 @@ function getCheapestTargetSelection(applicable){
   const autoChecked={};
   if(best){
     best.ids.forEach(id=>autoChecked[id]=true);
+    return {autoChecked, attainable:true};
   }
-  return autoChecked;
+  return {autoChecked:{}, attainable:false};
 }
 
 function buildTravauxBox(){
@@ -722,11 +750,21 @@ function buildTravauxBox(){
   card.style.display="block";
 
   const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  const autoChecked=getCheapestTargetSelection(applicable);
+  const recommendation=getCheapestTargetSelection(applicable);
+  const autoChecked=recommendation.autoChecked || {};
+  const note=document.getElementById("targetNote");
 
   applicable.forEach(t=>{
     travauxChecked[t.id]=!!autoChecked[t.id];
   });
+
+  if(targetDPE && !recommendation.attainable){
+    note.style.display="block";
+    note.textContent=`La classe ${targetDPE} n’est pas atteignable avec les travaux actuellement disponibles dans ce simulateur.`;
+  } else {
+    note.style.display="none";
+    note.textContent="";
+  }
 
   renderTravauxList(applicable);
   updateDPEFinal();
@@ -795,10 +833,19 @@ function syncTravauxDom(applicable){
 function refreshAutoRecommendation(){
   if(!lastData || !targetDPE) return;
   const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  const autoChecked=getCheapestTargetSelection(applicable);
+  const recommendation=getCheapestTargetSelection(applicable);
+  const autoChecked=recommendation.autoChecked || {};
+  const note=document.getElementById("targetNote");
   applicable.forEach(t=>{
     travauxChecked[t.id]=!!autoChecked[t.id];
   });
+  if(!recommendation.attainable){
+    note.style.display="block";
+    note.textContent=`La classe ${targetDPE} n’est pas atteignable avec les travaux actuellement disponibles dans ce simulateur.`;
+  } else {
+    note.style.display="none";
+    note.textContent="";
+  }
   syncTravauxDom(applicable);
   updateDPEFinal();
   updateCostTotal(applicable);
@@ -873,6 +920,8 @@ function uncheckAll(){
   // Décocher aussi le DPE cible
   targetDPE=null;
   document.querySelectorAll(".dpe-target-btns button").forEach(x=>x.classList.remove("selected"));
+  document.getElementById("targetNote").style.display="none";
+  document.getElementById("targetNote").textContent="";
   buildScale(lastDPE);
   const applicable=TRAVAUX_CATALOGUE.filter(t=>lastData&&t.condition(lastData));
   renderTravauxList(applicable);
@@ -984,7 +1033,9 @@ function calculateDPE(){
   let extra="";
   if(data.type==="appartement") extra=data.apartmentFloorFactor<1?"L'étage intermédiaire améliore légèrement le comportement thermique.":"La position du logement pénalise légèrement la consommation.";
   else extra=data.solarGain>0?"La présence de panneaux solaires améliore la consommation nette estimée.":"L'absence de panneaux solaires laisse un potentiel d'amélioration complémentaire.";
-  document.getElementById("summary").textContent=`Estimation indicative : le logement ressort en classe ${dpe} avec une consommation d'environ ${consumption} kWhEP/m²/an. ${extra}`;
+  const mitoyText = data.type==="maison" ? (data.mitoyenneteFactor<1 ? " La mitoyenneté réduit aussi les déperditions par les murs extérieurs." : " Une maison isolée présente davantage de surfaces exposées.") : "";
+  const volumeText = data.ceilingHeight>=2.9 ? " La hauteur sous plafond élevée augmente aussi le volume à chauffer." : data.ceilingHeight<=2.4 ? " La hauteur sous plafond contenue limite légèrement le volume à chauffer." : "";
+  document.getElementById("summary").textContent=`Estimation indicative : le logement ressort en classe ${dpe} avec une consommation d'environ ${consumption} kWhEP/m²/an. ${extra}${mitoyText}${volumeText}`;
 
   buildScale(dpe);
   buildSWGrid(data);
@@ -997,6 +1048,7 @@ function resetForm(){
   // housingType: inchangé (ne pas toucher)
   document.getElementById("surface").value=60;
   document.getElementById("year").value=1975;
+  document.getElementById("ceilingHeight").value=2.5;
   document.getElementById("departement").value="";
   document.getElementById("climateHint").textContent="";
   document.getElementById("heating").value="1.09";      // Je ne sais pas
@@ -1009,6 +1061,7 @@ function resetForm(){
   document.getElementById("facades").value="0.96";       // 1
   document.getElementById("apartmentFloor").value="0.96"; // Étage intermédiaire
   document.getElementById("solar").value="0";
+  const mit = document.getElementById("mitoyennete"); if(mit) mit.value="1.10";
   // Réinitialiser contrat énergie
   document.getElementById("prixKwh").value="0.2516";
   document.getElementById("prixGaz").value="0.1140";
@@ -1027,6 +1080,8 @@ function resetForm(){
   document.getElementById("dpeFinalBox").style.display="none";
   document.getElementById("recapCard").style.display="none";
   document.getElementById("targetBtns").innerHTML="";
+  document.getElementById("targetNote").style.display="none";
+  document.getElementById("targetNote").textContent="";
   lastData=null; lastDPE=null; lastConsumption=0; targetDPE=null; travauxChecked={}; travauxDevis={};
   buildScale();
   toggleTypeFields();
@@ -1038,6 +1093,7 @@ function loadDemo(kind){
   if(kind==="apt-old"){
     document.getElementById("housingType").value="appartement";
     document.getElementById("surface").value=48;
+    document.getElementById("ceilingHeight").value=2.8;
     document.getElementById("year").value=1955;
     document.getElementById("walls").value="1.18";
     document.getElementById("roof").value="1.16";
@@ -1048,6 +1104,7 @@ function loadDemo(kind){
   if(kind==="apt-top"){
     document.getElementById("housingType").value="appartement";
     document.getElementById("surface").value=72;
+    document.getElementById("ceilingHeight").value=2.5;
     document.getElementById("year").value=1982;
     document.getElementById("roof").value="1.16";
     document.getElementById("apartmentFloor").value="1.07";
@@ -1057,6 +1114,7 @@ function loadDemo(kind){
   if(kind==="house-solar"){
     document.getElementById("housingType").value="maison";
     document.getElementById("surface").value=118;
+    document.getElementById("ceilingHeight").value=2.6;
     document.getElementById("year").value=2008;
     document.getElementById("walls").value="0.84";
     document.getElementById("roof").value="0.82";
@@ -1065,6 +1123,7 @@ function loadDemo(kind){
     document.getElementById("heating").value="0.82";
     document.getElementById("hotWater").value="18";
     document.getElementById("solar").value="30";
+    const mit = document.getElementById("mitoyennete"); if(mit) mit.value="1.00";
   }
   toggleTypeFields();
   calculateDPE();
