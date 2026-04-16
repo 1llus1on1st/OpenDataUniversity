@@ -10,7 +10,6 @@
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#f8fbff 0%, #f5f7fb 100%);color:var(--text)}
 .wrap{max-width:1140px;margin:0 auto;padding:32px 20px 60px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-/* ── HERO (1 box, teal) ── */
 .hero-main{padding:28px 30px;background:linear-gradient(135deg,#1a8a74 0%,#117a65 100%);border-radius:var(--radius);color:#fff;margin-bottom:20px}
 .hero-main h1{margin:0 0 10px;font-size:22px;font-weight:800;line-height:1.2;color:#fff}
 .hero-main .sub{color:rgba(255,255,255,.85);font-size:14px;line-height:1.6;margin-bottom:16px}
@@ -18,7 +17,6 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
 .demo{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .demo button{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:10px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer}
 .demo button:hover{background:rgba(255,255,255,.28)}
-/* ── MAIN GRID ── */
 .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
 .section{padding:22px}
 h2{margin:0 0 16px;font-size:18px;font-weight:700;letter-spacing:-.01em;color:var(--text)}
@@ -34,7 +32,6 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .btn-primary{background:var(--primary);color:#fff}
 .btn-primary:hover{background:var(--primary-dark)}
 .btn-secondary{background:#edf2fb;color:#274163}
-/* ── DPE RESULT BOX ── */
 .result-card{padding:22px}
 .result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}
 .metric{font-size:30px;font-weight:800;line-height:1}
@@ -45,14 +42,13 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .dpe-row.active{opacity:1;transform:translateX(4px);box-shadow:var(--shadow)}
 .dpe-row.target-row{opacity:.7;outline:2px dashed #fff;outline-offset:-3px}
 .summary{color:var(--muted);line-height:1.6;font-size:14px}
-/* ── DPE TARGET SELECTOR ── */
+.real-box{margin-top:14px;padding:12px 14px;border-radius:12px;background:#f8fbff;border:1px solid #d8e5f6;font-size:13px;line-height:1.55;color:var(--text)}
+.real-box strong{color:#1d72d8}
 .dpe-target-section{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 .dpe-target-section label{font-size:13px;color:var(--muted);font-weight:600;display:block;margin-bottom:8px}
 .dpe-target-btns{display:flex;gap:8px;flex-wrap:wrap}
 .dpe-target-btns button{padding:6px 11px;border-radius:9px;font-size:13px;font-weight:700;color:#fff;border:none;cursor:pointer;opacity:.55;transition:.15s}
 .dpe-target-btns button.selected{opacity:1;outline:3px solid var(--text);outline-offset:2px}
-.target-note{display:none;margin-top:10px;padding:10px 12px;border-radius:10px;background:#fff4f0;border:1px solid #f4c3ae;color:#9a3412;font-size:12px;line-height:1.45}
-/* ── STRENGTHS / WEAKNESSES ── */
 .sw-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 .sw-box{border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.5}
 .sw-box.strengths{background:#e8f5f2;border:1px solid #b2ddd6}
@@ -60,13 +56,11 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .sw-box h3{margin:0 0 8px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:6px}
 .sw-box ul{margin:0;padding-left:18px;color:var(--text)}
 .sw-box li{margin-bottom:4px}
-/* ── DPE FINAL BOX ── */
 .dpe-final-box{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--primary-soft);border:1px solid #b2ddd6}
 .dpe-final-box .label{font-size:12px;color:var(--primary-dark);font-weight:700;margin-bottom:4px}
 .dpe-final-row{display:flex;align-items:center;gap:14px}
 .dpe-final-badge{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;color:#fff;font-size:22px;font-weight:900;box-shadow:0 4px 12px rgba(0,0,0,.15)}
 .dpe-final-text{font-size:13px;color:var(--muted);line-height:1.5}
-/* ── TRAVAUX BOX ── */
 .travaux-card{padding:22px;margin-top:20px}
 .travaux-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
 .travaux-header h2{margin:0}
@@ -92,7 +86,6 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .travail-devis-row input{width:130px;padding:7px 10px;font-size:13px;border-radius:9px}
 .travail-devis-row .hint{font-size:11px;color:#aaa}
 .show-if-house,.show-if-apartment{display:none}
-/* ── CONTRAT ÉNERGIE ── */
 .energie-box{background:#f8faff;border:1px solid #d0daf0;border-radius:14px;padding:14px 16px}
 .energie-box h3{margin:0 0 12px;font-size:13px;font-weight:700;color:var(--text)}
 .energie-field{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
@@ -103,7 +96,6 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 .energie-toggle{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:13px;color:var(--muted);font-weight:600;cursor:pointer}
 .energie-toggle input{width:16px;height:16px;accent-color:var(--primary);cursor:pointer}
 .hc-section{display:none}
-/* ── TABLEAU RÉCAPITULATIF ── */
 .recap-card{margin-top:20px;padding:22px}
 .recap-card h2{margin:0 0 16px;font-size:18px;font-weight:700}
 .recap-table{width:100%;border-collapse:collapse;font-size:13px}
@@ -123,1022 +115,328 @@ button{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:
 </head>
 <body>
 <div class="wrap">
-
-<!-- ── HERO (1 box, teal, top-left only) ── -->
 <div class="hero-main">
   <h1>Simulateur DPE indicatif &amp; scénarios de rénovation</h1>
   <div class="sub">Cette micro-application permet d'estimer une performance énergétique simplifiée, d'identifier les principaux points faibles du logement, puis de calculer des combinaisons de travaux cohérentes pour atteindre une classe DPE cible au meilleur coût.</div>
 </div>
 
-<!-- ── MAIN GRID ── -->
 <div class="grid">
-
-  <!-- LEFT: Caractéristiques -->
   <div class="card section">
     <h2>Caractéristiques du logement</h2>
     <div class="form-grid">
-
-      <div class="field">
-        <label for="housingType">Type de logement</label>
-        <select id="housingType" onchange="toggleTypeFields();calculateDPE()">
-          <option value="appartement">Appartement</option>
-          <option value="maison">Maison</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="surface">Surface habitable (m²)</label>
-        <input id="surface" type="number" min="10" step="1" value="60" oninput="calculateDPE()" />
-      </div>
-
-      <div class="field">
-        <label for="ceilingHeight">Hauteur sous plafond (m)</label>
-        <input id="ceilingHeight" type="number" min="2.0" max="5.0" step="0.1" value="2.5" oninput="calculateDPE()" />
-        <div class="hint">2,5 m correspond à une hauteur standard. Au-dessus, le volume chauffé augmente.</div>
-      </div>
-
-      <div class="field">
-        <label for="year">Année de construction</label>
-        <input id="year" type="number" min="1850" max="2026" step="1" value="1975" oninput="calculateDPE()" />
-      </div>
-
-      <!-- Zone climatique replaced by département -->
+      <div class="field"><label for="housingType">Type de logement</label><select id="housingType" onchange="toggleTypeFields();calculateDPE()"><option value="appartement">Appartement</option><option value="maison">Maison</option></select></div>
+      <div class="field"><label for="surface">Surface habitable (m²)</label><input id="surface" type="number" min="10" step="1" value="60" oninput="calculateDPE()" /></div>
+      <div class="field"><label for="addressInput">Adresse du logement</label><input id="addressInput" type="text" placeholder="Ex. 12 rue de la Paix" oninput="scheduleRealLookup()" /><div class="hint">Le DPE observé n'est calculé que si une consommation électrique à l’adresse et une donnée gaz IRIS sont toutes deux disponibles.</div></div>
+      <div class="field"><label for="cityInput">Ville / commune</label><input id="cityInput" type="text" placeholder="Ex. Paris" oninput="scheduleRealLookup()" /><div class="hint">Adresse + ville + département requis pour tenter le calcul observé hybride.</div></div>
+      <div class="field"><label for="year">Année de construction</label><input id="year" type="number" min="1850" max="2026" step="1" value="1975" oninput="calculateDPE()" /></div>
       <div class="field">
         <label for="departement">Département</label>
-        <select id="departement" onchange="updateClimateFromDept();calculateDPE()">
+        <select id="departement" onchange="updateClimateFromDept();scheduleRealLookup()">
           <option value="">— Choisir —</option>
-          <option value="01|1.05">01 – Ain</option>
-          <option value="02|1.12">02 – Aisne</option>
-          <option value="03|1.05">03 – Allier</option>
-          <option value="04|1.18">04 – Alpes-de-Haute-Provence</option>
-          <option value="05|1.22">05 – Hautes-Alpes</option>
-          <option value="06|0.88">06 – Alpes-Maritimes</option>
-          <option value="07|1.00">07 – Ardèche</option>
-          <option value="08|1.18">08 – Ardennes</option>
-          <option value="09|1.00">09 – Ariège</option>
-          <option value="10|1.05">10 – Aube</option>
-          <option value="11|0.88">11 – Aude</option>
-          <option value="12|1.03">12 – Aveyron</option>
-          <option value="13|0.85">13 – Bouches-du-Rhône</option>
-          <option value="14|1.00">14 – Calvados</option>
-          <option value="15|1.22">15 – Cantal</option>
-          <option value="16|0.95">16 – Charente</option>
-          <option value="17|0.92">17 – Charente-Maritime</option>
-          <option value="18|1.03">18 – Cher</option>
-          <option value="19|1.05">19 – Corrèze</option>
-          <option value="2A|0.82">2A – Corse-du-Sud</option>
-          <option value="2B|0.82">2B – Haute-Corse</option>
-          <option value="21|1.05">21 – Côte-d'Or</option>
-          <option value="22|0.95">22 – Côtes-d'Armor</option>
-          <option value="23|1.08">23 – Creuse</option>
-          <option value="24|0.95">24 – Dordogne</option>
-          <option value="25|1.12">25 – Doubs</option>
-          <option value="26|1.00">26 – Drôme</option>
-          <option value="27|1.00">27 – Eure</option>
-          <option value="28|1.00">28 – Eure-et-Loir</option>
-          <option value="29|0.95">29 – Finistère</option>
-          <option value="30|0.88">30 – Gard</option>
-          <option value="31|0.92">31 – Haute-Garonne</option>
-          <option value="32|0.90">32 – Gers</option>
-          <option value="33|0.90">33 – Gironde</option>
-          <option value="34|0.88">34 – Hérault</option>
-          <option value="35|0.97">35 – Ille-et-Vilaine</option>
-          <option value="36|1.03">36 – Indre</option>
-          <option value="37|1.00">37 – Indre-et-Loire</option>
-          <option value="38|1.18">38 – Isère</option>
-          <option value="39|1.08">39 – Jura</option>
-          <option value="40|0.90">40 – Landes</option>
-          <option value="41|1.00">41 – Loir-et-Cher</option>
-          <option value="42|1.03">42 – Loire</option>
-          <option value="43|1.20">43 – Haute-Loire</option>
-          <option value="44|0.95">44 – Loire-Atlantique</option>
-          <option value="45|1.00">45 – Loiret</option>
-          <option value="46|1.00">46 – Lot</option>
-          <option value="47|0.90">47 – Lot-et-Garonne</option>
-          <option value="48|1.15">48 – Lozère</option>
-          <option value="49|0.97">49 – Maine-et-Loire</option>
-          <option value="50|0.97">50 – Manche</option>
-          <option value="51|1.05">51 – Marne</option>
-          <option value="52|1.12">52 – Haute-Marne</option>
-          <option value="53|0.97">53 – Mayenne</option>
-          <option value="54|1.15">54 – Meurthe-et-Moselle</option>
-          <option value="55|1.15">55 – Meuse</option>
-          <option value="56|0.93">56 – Morbihan</option>
-          <option value="57|1.15">57 – Moselle</option>
-          <option value="58|1.05">58 – Nièvre</option>
-          <option value="59|1.15">59 – Nord</option>
-          <option value="60|1.05">60 – Oise</option>
-          <option value="61|1.00">61 – Orne</option>
-          <option value="62|1.15">62 – Pas-de-Calais</option>
-          <option value="63|1.20">63 – Puy-de-Dôme</option>
-          <option value="64|0.92">64 – Pyrénées-Atlantiques</option>
-          <option value="65|1.08">65 – Hautes-Pyrénées</option>
-          <option value="66|0.88">66 – Pyrénées-Orientales</option>
-          <option value="67|1.18">67 – Bas-Rhin</option>
-          <option value="68|1.18">68 – Haut-Rhin</option>
-          <option value="69|1.00">69 – Rhône</option>
-          <option value="70|1.10">70 – Haute-Saône</option>
-          <option value="71|1.05">71 – Saône-et-Loire</option>
-          <option value="72|0.97">72 – Sarthe</option>
-          <option value="73|1.25">73 – Savoie</option>
-          <option value="74|1.25">74 – Haute-Savoie</option>
-          <option value="75|1.00">75 – Paris</option>
-          <option value="76|1.00">76 – Seine-Maritime</option>
-          <option value="77|1.00">77 – Seine-et-Marne</option>
-          <option value="78|1.00">78 – Yvelines</option>
-          <option value="79|0.95">79 – Deux-Sèvres</option>
-          <option value="80|1.12">80 – Somme</option>
-          <option value="81|0.92">81 – Tarn</option>
-          <option value="82|0.92">82 – Tarn-et-Garonne</option>
-          <option value="83|0.85">83 – Var</option>
-          <option value="84|0.88">84 – Vaucluse</option>
-          <option value="85|0.93">85 – Vendée</option>
-          <option value="86|0.97">86 – Vienne</option>
-          <option value="87|1.05">87 – Haute-Vienne</option>
-          <option value="88|1.18">88 – Vosges</option>
-          <option value="89|1.05">89 – Yonne</option>
-          <option value="90|1.12">90 – Territoire de Belfort</option>
-          <option value="91|1.00">91 – Essonne</option>
-          <option value="92|1.00">92 – Hauts-de-Seine</option>
-          <option value="93|1.00">93 – Seine-Saint-Denis</option>
-          <option value="94|1.00">94 – Val-de-Marne</option>
-          <option value="95|1.00">95 – Val-d'Oise</option>
-          <option value="971|0.60">971 – Guadeloupe</option>
-          <option value="972|0.60">972 – Martinique</option>
-          <option value="973|0.60">973 – Guyane</option>
-          <option value="974|0.60">974 – La Réunion</option>
-          <option value="976|0.60">976 – Mayotte</option>
+          <option value="75|1.00">75 – Paris</option><option value="92|1.00">92 – Hauts-de-Seine</option><option value="93|1.00">93 – Seine-Saint-Denis</option><option value="94|1.00">94 – Val-de-Marne</option><option value="95|1.00">95 – Val-d'Oise</option>
+          <option value="77|1.00">77 – Seine-et-Marne</option><option value="78|1.00">78 – Yvelines</option><option value="91|1.00">91 – Essonne</option>
+          <option value="01|1.05">01 – Ain</option><option value="02|1.12">02 – Aisne</option><option value="03|1.05">03 – Allier</option><option value="04|1.18">04 – Alpes-de-Haute-Provence</option><option value="05|1.22">05 – Hautes-Alpes</option><option value="06|0.88">06 – Alpes-Maritimes</option><option value="07|1.00">07 – Ardèche</option><option value="08|1.18">08 – Ardennes</option><option value="09|1.00">09 – Ariège</option><option value="10|1.05">10 – Aube</option><option value="11|0.88">11 – Aude</option><option value="12|1.03">12 – Aveyron</option><option value="13|0.85">13 – Bouches-du-Rhône</option><option value="14|1.00">14 – Calvados</option><option value="15|1.22">15 – Cantal</option><option value="16|0.95">16 – Charente</option><option value="17|0.92">17 – Charente-Maritime</option><option value="18|1.03">18 – Cher</option><option value="19|1.05">19 – Corrèze</option><option value="2A|0.82">2A – Corse-du-Sud</option><option value="2B|0.82">2B – Haute-Corse</option><option value="21|1.05">21 – Côte-d'Or</option><option value="22|0.95">22 – Côtes-d'Armor</option><option value="23|1.08">23 – Creuse</option><option value="24|0.95">24 – Dordogne</option><option value="25|1.12">25 – Doubs</option><option value="26|1.00">26 – Drôme</option><option value="27|1.00">27 – Eure</option><option value="28|1.00">28 – Eure-et-Loir</option><option value="29|0.95">29 – Finistère</option><option value="30|0.88">30 – Gard</option><option value="31|0.92">31 – Haute-Garonne</option><option value="32|0.90">32 – Gers</option><option value="33|0.90">33 – Gironde</option><option value="34|0.88">34 – Hérault</option><option value="35|0.97">35 – Ille-et-Vilaine</option><option value="36|1.03">36 – Indre</option><option value="37|1.00">37 – Indre-et-Loire</option><option value="38|1.18">38 – Isère</option><option value="39|1.08">39 – Jura</option><option value="40|0.90">40 – Landes</option><option value="41|1.00">41 – Loir-et-Cher</option><option value="42|1.03">42 – Loire</option><option value="43|1.20">43 – Haute-Loire</option><option value="44|0.95">44 – Loire-Atlantique</option><option value="45|1.00">45 – Loiret</option><option value="46|1.00">46 – Lot</option><option value="47|0.90">47 – Lot-et-Garonne</option><option value="48|1.15">48 – Lozère</option><option value="49|0.97">49 – Maine-et-Loire</option><option value="50|0.97">50 – Manche</option><option value="51|1.05">51 – Marne</option><option value="52|1.12">52 – Haute-Marne</option><option value="53|0.97">53 – Mayenne</option><option value="54|1.15">54 – Meurthe-et-Moselle</option><option value="55|1.15">55 – Meuse</option><option value="56|0.93">56 – Morbihan</option><option value="57|1.15">57 – Moselle</option><option value="58|1.05">58 – Nièvre</option><option value="59|1.15">59 – Nord</option><option value="60|1.05">60 – Oise</option><option value="61|1.00">61 – Orne</option><option value="62|1.15">62 – Pas-de-Calais</option><option value="63|1.20">63 – Puy-de-Dôme</option><option value="64|0.92">64 – Pyrénées-Atlantiques</option><option value="65|1.08">65 – Hautes-Pyrénées</option><option value="66|0.88">66 – Pyrénées-Orientales</option><option value="67|1.18">67 – Bas-Rhin</option><option value="68|1.18">68 – Haut-Rhin</option><option value="69|1.00">69 – Rhône</option><option value="70|1.10">70 – Haute-Saône</option><option value="71|1.05">71 – Saône-et-Loire</option><option value="72|0.97">72 – Sarthe</option><option value="73|1.25">73 – Savoie</option><option value="74|1.25">74 – Haute-Savoie</option><option value="76|1.00">76 – Seine-Maritime</option><option value="79|0.95">79 – Deux-Sèvres</option><option value="80|1.12">80 – Somme</option><option value="81|0.92">81 – Tarn</option><option value="82|0.92">82 – Tarn-et-Garonne</option><option value="83|0.85">83 – Var</option><option value="84|0.88">84 – Vaucluse</option><option value="85|0.93">85 – Vendée</option><option value="86|0.97">86 – Vienne</option><option value="87|1.05">87 – Haute-Vienne</option><option value="88|1.18">88 – Vosges</option><option value="89|1.05">89 – Yonne</option><option value="90|1.12">90 – Territoire de Belfort</option><option value="971|0.60">971 – Guadeloupe</option><option value="972|0.60">972 – Martinique</option><option value="973|0.60">973 – Guyane</option><option value="974|0.60">974 – La Réunion</option><option value="976|0.60">976 – Mayotte</option>
         </select>
         <div class="hint" id="climateHint"></div>
       </div>
-
-      <div class="field">
-        <label for="heating">Type de chauffage</label>
-        <select id="heating" onchange="calculateDPE();updateRecap()">
-          <option value="1.18" data-energy="elec">Convecteurs électriques</option>
-          <option value="0.82" data-energy="elec">Pompe à chaleur (élec.)</option>
-          <option value="1.00" data-energy="gaz">Chaudière gaz standard</option>
-          <option value="0.92" data-energy="gaz">Chaudière gaz performante</option>
-          <option value="0.95" data-energy="gaz">Chaudière fioul</option>
-          <option value="0.88" data-energy="elec">Poêle / insert bois</option>
-          <option value="1.09" data-energy="elec" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="hotWater">Production d'eau chaude</label>
-        <select id="hotWater" onchange="calculateDPE()">
-          <option value="32">Ballon électrique</option>
-          <option value="24">Système couplé à la chaudière</option>
-          <option value="18">Chauffe-eau thermodynamique</option>
-          <option value="14">Chauffe-eau solaire</option>
-          <option value="28" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="walls">Isolation des murs</label>
-        <select id="walls" onchange="calculateDPE()">
-          <option value="1.18">Faible</option>
-          <option value="1.00">Moyenne</option>
-          <option value="0.84">Bonne</option>
-          <option value="1.09" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="roof">Isolation de la toiture</label>
-        <select id="roof" onchange="calculateDPE()">
-          <option value="1.16">Faible</option>
-          <option value="1.00">Moyenne</option>
-          <option value="0.82">Bonne</option>
-          <option value="1.08" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="floorIns">Isolation du plancher bas</label>
-        <select id="floorIns" onchange="calculateDPE()">
-          <option value="1.10">Faible</option>
-          <option value="1.00">Moyenne</option>
-          <option value="0.88">Bonne</option>
-          <option value="1.05" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="windows">Fenêtres</label>
-        <select id="windows" onchange="calculateDPE()">
-          <option value="1.15">Simple vitrage</option>
-          <option value="1.00" selected>Double vitrage</option>
-          <option value="0.88">Triple vitrage</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="ventilation">Ventilation</label>
-        <select id="ventilation" onchange="calculateDPE()">
-          <option value="1.08">Faible / peu maîtrisée</option>
-          <option value="1.00">Standard</option>
-          <option value="0.94">Performante</option>
-          <option value="1.04" selected>Je ne sais pas</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="facades">Façades exposées</label>
-        <select id="facades" onchange="calculateDPE()">
-          <option value="0.90">0</option>
-          <option value="0.96" selected>1</option>
-          <option value="1.00">2</option>
-          <option value="1.06">3</option>
-          <option value="1.12">4</option>
-        </select>
-      </div>
-
-      <div class="field show-if-apartment">
-        <label for="apartmentFloor">Étage / position du logement</label>
-        <select id="apartmentFloor">
-          <option value="1.08">Rez-de-chaussée</option>
-          <option value="0.96" selected>Étage intermédiaire</option>
-          <option value="1.07">Dernier étage</option>
-        </select>
-        <div class="hint">Les appartements intermédiaires sont en général un peu plus favorisés thermiquement.</div>
-      </div>
-
-      <div class="field show-if-house">
-        <label for="solar">Présence de panneaux solaires</label>
-        <select id="solar">
-          <option value="0" selected>Non</option>
-          <option value="18">Oui, installation partielle</option>
-          <option value="30">Oui, installation significative</option>
-        </select>
-        <div class="hint">Le solaire réduit ici la consommation nette de façon indicative.</div>
-      </div>
-
-      <div class="field show-if-house">
-        <label for="mitoyennete">Mitoyenneté</label>
-        <select id="mitoyennete" onchange="calculateDPE()">
-          <option value="1.10" selected>Maison isolée</option>
-          <option value="1.00">Mitoyenne sur 1 côté</option>
-          <option value="0.92">Mitoyenne sur 2 côtés</option>
-        </select>
-        <div class="hint">Moins il y a de façades directement exposées, moins les déperditions sont importantes.</div>
-      </div>
-
-      <div class="field full">
-        <div class="actions">
-          <button class="btn-secondary" type="button" onclick="resetForm()">Réinitialiser</button>
-        </div>
-      </div>
+      <div class="field"><label for="heating">Type de chauffage</label><select id="heating" onchange="calculateDPE();updateRecap()"><option value="1.18" data-energy="elec">Convecteurs électriques</option><option value="0.82" data-energy="elec">Pompe à chaleur (élec.)</option><option value="1.00" data-energy="gaz">Chaudière gaz standard</option><option value="0.92" data-energy="gaz">Chaudière gaz performante</option><option value="0.95" data-energy="gaz">Chaudière fioul</option><option value="0.88" data-energy="elec">Poêle / insert bois</option><option value="1.09" data-energy="elec" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="hotWater">Production d'eau chaude</label><select id="hotWater" onchange="calculateDPE()"><option value="32">Ballon électrique</option><option value="24">Système couplé à la chaudière</option><option value="18">Chauffe-eau thermodynamique</option><option value="14">Chauffe-eau solaire</option><option value="28" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="walls">Isolation des murs</label><select id="walls" onchange="calculateDPE()"><option value="1.18">Faible</option><option value="1.00">Moyenne</option><option value="0.84">Bonne</option><option value="1.09" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="roof">Isolation de la toiture</label><select id="roof" onchange="calculateDPE()"><option value="1.16">Faible</option><option value="1.00">Moyenne</option><option value="0.82">Bonne</option><option value="1.08" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="floorIns">Isolation du plancher bas</label><select id="floorIns" onchange="calculateDPE()"><option value="1.10">Faible</option><option value="1.00">Moyenne</option><option value="0.88">Bonne</option><option value="1.05" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="windows">Fenêtres</label><select id="windows" onchange="calculateDPE()"><option value="1.15">Simple vitrage</option><option value="1.00" selected>Double vitrage</option><option value="0.88">Triple vitrage</option></select></div>
+      <div class="field"><label for="ventilation">Ventilation</label><select id="ventilation" onchange="calculateDPE()"><option value="1.08">Faible / peu maîtrisée</option><option value="1.00">Standard</option><option value="0.94">Performante</option><option value="1.04" selected>Je ne sais pas</option></select></div>
+      <div class="field"><label for="facades">Façades exposées</label><select id="facades" onchange="calculateDPE()"><option value="0.90">0</option><option value="0.96" selected>1</option><option value="1.00">2</option><option value="1.06">3</option><option value="1.12">4</option></select></div>
+      <div class="field show-if-apartment"><label for="apartmentFloor">Étage / position du logement</label><select id="apartmentFloor" onchange="calculateDPE()"><option value="1.08">Rez-de-chaussée</option><option value="0.96" selected>Étage intermédiaire</option><option value="1.07">Dernier étage</option></select><div class="hint">Les appartements intermédiaires sont en général un peu plus favorisés thermiquement.</div></div>
+      <div class="field show-if-house"><label for="solar">Présence de panneaux solaires</label><select id="solar" onchange="calculateDPE()"><option value="0" selected>Non</option><option value="18">Oui, installation partielle</option><option value="30">Oui, installation significative</option></select><div class="hint">Le solaire réduit ici la consommation nette de façon indicative.</div></div>
+      <div class="field full"><div class="actions"><button class="btn-secondary" type="button" onclick="resetForm()">Réinitialiser</button></div></div>
     </div>
   </div>
 
-  <!-- RIGHT: DPE result -->
   <div class="card result-card">
     <div class="result-top">
-      <div>
-        <div class="metric" id="consumptionValue">—</div>
-        <div class="metric-sub">kWhEP / m² / an estimés</div>
-      </div>
+      <div><div class="metric" id="consumptionValue">—</div><div class="metric-sub">kWhEP / m² / an estimés</div></div>
       <div class="dpe-badge" id="badge" style="background:#94a3b8">—</div>
     </div>
-
     <div class="summary" id="summary"></div>
+    <div class="real-box" id="realInfo" style="display:none"></div>
     <div class="dpe-scale" id="dpeScale"></div>
-
-    <!-- Points forts / Points faibles -->
     <div class="sw-grid" id="swGrid" style="display:none"></div>
   </div>
 </div>
 
-<!-- ── TRAVAUX DE RÉNOVATION ── -->
 <div class="card travaux-card" id="travauxCard" style="display:none">
-  <div class="travaux-header">
-    <h2>Travaux de rénovation</h2>
-    <button class="btn-uncheck-all" type="button" onclick="uncheckAll()">Tout décocher</button>
-  </div>
+  <div class="travaux-header"><h2>Travaux de rénovation</h2><button class="btn-uncheck-all" type="button" onclick="uncheckAll()">Tout décocher</button></div>
   <div class="travaux-body-grid">
-    <!-- LEFT: list + cost -->
-    <div>
-      <div class="travaux-list" id="travauxList"></div>
-      <div class="cost-total" id="costTotal" style="display:none">
-        <span class="ct-label">Coût total estimé des travaux sélectionnés :</span>
-        <span class="ct-value" id="costTotalValue">—</span>
-      </div>
-    </div>
-    <!-- RIGHT: DPE cible + DPE final + Contrat énergie -->
+    <div><div class="travaux-list" id="travauxList"></div><div class="cost-total" id="costTotal" style="display:none"><span class="ct-label">Coût total estimé des travaux sélectionnés :</span><span class="ct-value" id="costTotalValue">—</span></div></div>
     <div class="travaux-sidebar">
-      <div class="dpe-target-section">
-        <label>Classe DPE cible</label>
-        <div class="dpe-target-btns" id="targetBtns"></div>
-        <div class="target-note" id="targetNote"></div>
-      </div>
-      <div class="dpe-final-box" id="dpeFinalBox" style="display:none">
-        <div class="label">DPE estimé après travaux sélectionnés</div>
-        <div class="dpe-final-row">
-          <div class="dpe-final-badge" id="dpeFinalBadge">—</div>
-          <div class="dpe-final-text" id="dpeFinalText">—</div>
-        </div>
-      </div>
-
-      <!-- Contrat énergie -->
+      <div class="dpe-target-section"><label>Classe DPE cible</label><div class="dpe-target-btns" id="targetBtns"></div>
+<div id="targetMessage" style="font-size:12px;color:#c0392b;margin-top:8px;display:none;"></div></div>
+      <div class="dpe-final-box" id="dpeFinalBox" style="display:none"><div class="label">DPE estimé après travaux sélectionnés</div><div class="dpe-final-row"><div class="dpe-final-badge" id="dpeFinalBadge">—</div><div class="dpe-final-text" id="dpeFinalText">—</div></div></div>
       <div class="energie-box">
         <h3>⚡ Contrat énergie</h3>
         <div class="energie-row">
-          <div class="energie-field">
-            <label for="prixKwh">Prix kWh élec. (€)</label>
-            <input type="number" id="prixKwh" value="0.2516" step="0.001" min="0" oninput="updateRecap()"/>
-          </div>
-          <div class="energie-field">
-            <label for="prixGaz">Prix kWh gaz (€)</label>
-            <input type="number" id="prixGaz" value="0.1140" step="0.001" min="0" oninput="updateRecap()"/>
-          </div>
+          <div class="energie-field"><label for="prixKwh">Prix kWh élec. (€)</label><input type="number" id="prixKwh" value="0.2516" step="0.001" min="0" oninput="updateRecap()"/></div>
+          <div class="energie-field"><label for="prixGaz">Prix kWh gaz (€)</label><input type="number" id="prixGaz" value="0.1140" step="0.001" min="0" oninput="updateRecap()"/></div>
         </div>
-        <label class="energie-toggle">
-          <input type="checkbox" id="hcToggle" onchange="toggleHC()"/>
-          Contrat heures creuses / heures pleines
-        </label>
+        <label class="energie-toggle"><input type="checkbox" id="hcToggle" onchange="toggleHC()"/>Contrat heures creuses / heures pleines</label>
         <div class="hc-section" id="hcSection">
           <div class="energie-row">
-            <div class="energie-field">
-              <label for="prixHC">Prix HC (€/kWh)</label>
-              <input type="number" id="prixHC" value="0.1830" step="0.001" min="0" oninput="updateRecap()"/>
-            </div>
-            <div class="energie-field">
-              <label for="prixHP">Prix HP (€/kWh)</label>
-              <input type="number" id="prixHP" value="0.2460" step="0.001" min="0" oninput="updateRecap()"/>
-            </div>
+            <div class="energie-field"><label for="prixHC">Prix HC (€/kWh)</label><input type="number" id="prixHC" value="0.1830" step="0.001" min="0" oninput="updateRecap()"/></div>
+            <div class="energie-field"><label for="prixHP">Prix HP (€/kWh)</label><input type="number" id="prixHP" value="0.2460" step="0.001" min="0" oninput="updateRecap()"/></div>
           </div>
-          <div class="energie-field">
-            <label for="pctHC">Part heures creuses (%)</label>
-            <input type="number" id="pctHC" value="40" step="1" min="0" max="100" oninput="updateRecap()"/>
-          </div>
+          <div class="energie-field"><label for="pctHC">Part heures creuses (%)</label><input type="number" id="pctHC" value="40" step="1" min="0" max="100" oninput="updateRecap()"/></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── TABLEAU RÉCAPITULATIF FINANCIER ── -->
 <div class="card recap-card" id="recapCard" style="display:none">
   <h2>Récapitulatif financier</h2>
-  <table class="recap-table" id="recapTable">
-    <thead>
-      <tr>
-        <th>Travaux</th>
-        <th>Coût estimé</th>
-        <th>Gain énergétique</th>
-        <th>Économie annuelle</th>
-        <th>Point mort</th>
-      </tr>
-    </thead>
-    <tbody id="recapBody"></tbody>
-  </table>
+  <table class="recap-table" id="recapTable"><thead><tr><th>Travaux</th><th>Coût estimé</th><th>Gain énergétique</th><th>Économie annuelle</th><th>Point mort</th></tr></thead><tbody id="recapBody"></tbody></table>
   <div class="recap-note" id="recapNote"></div>
 </div>
 
 <script>
 const DPE_COLORS={A:"#1faa59",B:"#52b45f",C:"#97bf3f",D:"#d4b52c",E:"#e38b2c",F:"#d9642b",G:"#c63b2d"};
 const DPE_THRESHOLDS=[{letter:"A",max:70},{letter:"B",max:110},{letter:"C",max:180},{letter:"D",max:250},{letter:"E",max:330},{letter:"F",max:420},{letter:"G",max:Infinity}];
-
-// ── Département → zone climatique
-function updateClimateFromDept(){
-  const sel=document.getElementById("departement");
-  const val=sel.value;
-  if(!val){ document.getElementById("climateHint").textContent=""; return; }
-  const factor=parseFloat(val.split("|")[1]);
-  const zones={0.60:"Zone très douce (DOM-TOM)",0.82:"Zone très douce",0.85:"Zone douce",0.88:"Zone douce",0.90:"Zone douce",0.92:"Zone douce",0.93:"Zone douce",0.95:"Zone tempérée douce",0.97:"Zone tempérée",1.00:"Zone tempérée",1.03:"Zone tempérée",1.05:"Zone tempérée à fraîche",1.08:"Zone fraîche",1.12:"Zone froide",1.15:"Zone froide",1.18:"Zone froide à très froide",1.20:"Zone très froide",1.22:"Zone très froide",1.25:"Zone très froide (montagne)"};
-  const label=zones[factor]||"Zone tempérée";
-  document.getElementById("climateHint").textContent=`${label} (facteur ${factor})`;
-}
-
-function getClimateFactor(){
-  const val=document.getElementById("departement").value;
-  if(!val) return 1.0;
-  return parseFloat(val.split("|")[1]);
-}
-
-// ── DPE target buttons
+function updateClimateFromDept(){const sel=document.getElementById("departement");const val=sel.value;if(!val){document.getElementById("climateHint").textContent="";return;}const factor=parseFloat(val.split("|")[1]);const zones={0.60:"Zone très douce (DOM-TOM)",0.82:"Zone très douce",0.85:"Zone douce",0.88:"Zone douce",0.90:"Zone douce",0.92:"Zone douce",0.93:"Zone douce",0.95:"Zone tempérée douce",0.97:"Zone tempérée",1.00:"Zone tempérée",1.03:"Zone tempérée",1.05:"Zone tempérée à fraîche",1.08:"Zone fraîche",1.12:"Zone froide",1.15:"Zone froide",1.18:"Zone froide à très froide",1.20:"Zone très froide",1.22:"Zone très froide",1.25:"Zone très froide (montagne)"};document.getElementById("climateHint").textContent=`${zones[factor]||"Zone tempérée"} (facteur ${factor})`;}
+function getClimateFactor(){const val=document.getElementById("departement").value;if(!val) return 1.0;return parseFloat(val.split("|")[1]);}
 let targetDPE=null;
-function buildTargetBtns(){
-  const c=document.getElementById("targetBtns");
-  c.innerHTML="";
-  DPE_THRESHOLDS.forEach(t=>{
-    const b=document.createElement("button");
-    b.textContent=t.letter;
-    b.style.background=DPE_COLORS[t.letter];
-    b.dataset.letter=t.letter;
-    if(t.letter===targetDPE) b.classList.add("selected");
-    b.onclick=()=>{
-      if(targetDPE===t.letter){
-        // deselect
-        targetDPE=null;
-        b.classList.remove("selected");
-      } else {
-        targetDPE=t.letter;
-        document.querySelectorAll(".dpe-target-btns button").forEach(x=>x.classList.remove("selected"));
-        b.classList.add("selected");
-      }
-      buildScale(lastDPE);
-      buildTravauxBox();
-    };
-    c.appendChild(b);
-  });
-}
-
-// ── Scale
-function buildScale(active){
-  const scale=document.getElementById("dpeScale");
-  scale.innerHTML="";
-  DPE_THRESHOLDS.forEach((row,idx)=>{
-    const min=idx===0?0:DPE_THRESHOLDS[idx-1].max;
-    const maxLabel=row.max===Infinity?">"+DPE_THRESHOLDS[idx-1].max:`${min} – ${row.max}`;
-    const div=document.createElement("div");
-    let cls="dpe-row";
-    if(row.letter===active) cls+=" active";
-    if(row.letter===targetDPE && row.letter!==active) cls+=" target-row";
-    div.className=cls;
-    div.style.background=DPE_COLORS[row.letter];
-    let extra="";
-    if(row.letter===targetDPE && row.letter!==active) extra=' <span style="font-size:11px;opacity:.9">← cible</span>';
-    div.innerHTML=`<div>${row.letter}</div><div>Classe ${row.letter}${extra}</div><div>${maxLabel} kWhEP/m²</div>`;
-    scale.appendChild(div);
-  });
-}
-
-function getDPE(value){
-  for(const row of DPE_THRESHOLDS){ if(value<row.max) return row.letter; }
-  return "G";
-}
-
-function toggleTypeFields(){
-  const type=document.getElementById("housingType").value;
-  document.querySelectorAll(".show-if-house").forEach(el=>{el.style.display=type==="maison"?"flex":"none";});
-  document.querySelectorAll(".show-if-apartment").forEach(el=>{el.style.display=type==="appartement"?"flex":"none";});
-}
-
-function collectData(){
-  const type=document.getElementById("housingType").value;
-  const year=Number(document.getElementById("year").value||1975);
-  let yearFactor=1.0;
-  if(year<1948) yearFactor=1.28;
-  else if(year<1975) yearFactor=1.18;
-  else if(year<1990) yearFactor=1.08;
-  else if(year<2005) yearFactor=0.98;
-  else if(year<2013) yearFactor=0.88;
-  else yearFactor=0.76;
-  const compactnessFactor=type==="appartement"?0.94:1.08;
-  const apartmentFloorFactor=type==="appartement"?Number(document.getElementById("apartmentFloor").value||1):1;
-  const solarGain=type==="maison"?Number(document.getElementById("solar").value||0):0;
-  const mitoyenneteFactor=type==="maison"?Number(document.getElementById("mitoyennete").value||1.10):1;
-  const ceilingHeight=Number(document.getElementById("ceilingHeight").value||2.5);
-  const ceilingHeightFactor=Math.max(0.9, Math.min(1.5, ceilingHeight/2.5));
-  return {
-    type,
-    surface:Number(document.getElementById("surface").value||60),
-    ceilingHeight,
-    ceilingHeightFactor,
-    climate:getClimateFactor(),
-    heating:Number(document.getElementById("heating").value||1),
-    hotWater:Number(document.getElementById("hotWater").value||24),
-    walls:Number(document.getElementById("walls").value||1),
-    roof:Number(document.getElementById("roof").value||1),
-    floorIns:Number(document.getElementById("floorIns").value||1),
-    windows:Number(document.getElementById("windows").value||1),
-    ventilation:Number(document.getElementById("ventilation").value||1),
-    facades:Number(document.getElementById("facades").value||1),
-    yearFactor, compactnessFactor, apartmentFloorFactor, solarGain, mitoyenneteFactor
-  };
-}
-
-function computeConsumption(d){
-  const baseNeed=125;
-  const envelope=d.yearFactor*d.climate*d.walls*d.roof*d.floorIns*d.windows*d.ventilation*d.facades*d.compactnessFactor*d.apartmentFloorFactor*d.ceilingHeightFactor*d.mitoyenneteFactor;
-  return Math.round(Math.max(40, baseNeed*envelope*d.heating+d.hotWater+16-d.solarGain));
-}
-
-function getStrengthsWeaknesses(d){
-  const strengths=[], weaknesses=[];
-  if(d.walls<=0.90) strengths.push("Bonne isolation des murs");
-  else if(d.walls>1.1) weaknesses.push("Murs faiblement isolés (pertes latérales importantes)");
-  if(d.roof<=0.88) strengths.push("Toiture bien isolée");
-  else if(d.roof>1.1) weaknesses.push("Toiture peu isolée (poste souvent prioritaire)");
-  if(d.floorIns<=0.92) strengths.push("Plancher bas bien isolé");
-  else if(d.floorIns>1.05) weaknesses.push("Plancher bas peu isolé");
-  if(d.windows<=0.95) strengths.push("Fenêtres performantes");
-  else if(d.windows>1.1) weaknesses.push("Fenêtres peu performantes (inconfort & déperditions)");
-  if(d.heating<=0.85) strengths.push("Système de chauffage performant");
-  else if(d.heating>1.1) weaknesses.push("Système de chauffage énergivore");
-  if(d.ventilation<=0.96) strengths.push("Ventilation maîtrisée");
-  else if(d.ventilation>1.04) weaknesses.push("Ventilation peu maîtrisée");
-  if(d.type==="maison" && d.solarGain>0) strengths.push("Production solaire réduisant la consommation nette");
-  if(d.type==="maison" && d.mitoyenneteFactor < 1.02) strengths.push("Mitoyenneté favorable limitant les surfaces exposées.");
-  if(d.type==="appartement" && d.apartmentFloorFactor<1) strengths.push("Étage intermédiaire thermiquement favorable");
-  else if(d.type==="appartement" && d.apartmentFloorFactor>1.02) weaknesses.push("Position du logement moins favorable (RdC ou dernier étage)");
-  if(d.type==="maison" && d.mitoyenneteFactor >= 1.08) weaknesses.push("Maison isolée : davantage de surfaces déperditives exposées.");
-  if(d.ceilingHeight <= 2.4) strengths.push("Hauteur sous plafond contenue, donc volume chauffé plutôt favorable.");
-  else if(d.ceilingHeight >= 2.9) weaknesses.push("Hauteur sous plafond élevée : volume chauffé plus important.");
-  if(!strengths.length) strengths.push("Aucun point fort identifié dans cette simulation");
-  if(!weaknesses.length) weaknesses.push("Aucun point faible majeur identifié");
-  return {strengths, weaknesses};
-}
-
-function buildSWGrid(d){
-  const grid=document.getElementById("swGrid");
-  const {strengths,weaknesses}=getStrengthsWeaknesses(d);
-  grid.style.display="grid";
-  grid.innerHTML=`
-    <div class="sw-box strengths">
-      <h3>✅ Points forts</h3>
-      <ul>${strengths.map(s=>`<li>${s}</li>`).join("")}</ul>
-    </div>
-    <div class="sw-box weaknesses">
-      <h3>⚠️ Points faibles</h3>
-      <ul>${weaknesses.map(w=>`<li>${w}</li>`).join("")}</ul>
-    </div>`;
-}
-
-// ── TRAVAUX catalogue — costPerM2Low/High for surface-indexed costs, fixedLow/High for flat costs
-const TRAVAUX_CATALOGUE=[
-  {id:"walls",title:"Isolation des murs",desc:"Réduit fortement les déperditions latérales, surtout si les murs sont peu isolés.",costPerM2Low:80,costPerM2High:160,gain:24,gainFactor:0.12,priority:"high",condition:d=>d.walls>0.95},
-  {id:"roof",title:"Isolation de la toiture",desc:"Souvent le geste le plus rentable : les combles perdus représentent jusqu'à 30% des déperditions.",costPerM2Low:25,costPerM2High:55,gain:18,gainFactor:0.10,priority:"high",condition:d=>d.roof>0.95},
-  {id:"floorIns",title:"Isolation du plancher bas",desc:"Limite les pertes par le sol, surtout pour les RdC ou maisons.",costPerM2Low:20,costPerM2High:50,gain:10,gainFactor:0.07,priority:"med",condition:d=>d.floorIns>0.95},
-  {id:"windows",title:"Remplacement des fenêtres",desc:"Double ou triple vitrage pour réduire les ponts thermiques et améliorer le confort.",costPerM2Low:40,costPerM2High:90,gain:14,gainFactor:0.08,priority:"med",condition:d=>d.windows>0.95},
-  {id:"heating",title:"Remplacement du chauffage (PAC)",desc:"Une pompe à chaleur air/eau est nettement plus efficace que des convecteurs ou une chaudière standard.",costPerM2Low:60,costPerM2High:110,gain:30,gainFactor:0.18,priority:"high",condition:d=>d.heating>0.90},
-  {id:"ventilation",title:"Amélioration de la ventilation",desc:"Une VMC double-flux réduit les pertes liées au renouvellement d'air.",costPerM2Low:20,costPerM2High:45,gain:8,gainFactor:0.06,priority:"low",condition:d=>d.ventilation>0.97},
-  {id:"hotWater",title:"Chauffe-eau thermodynamique",desc:"Divise par 3 la consommation électrique liée à l'ECS par rapport à un ballon standard.",costPerM2Low:10,costPerM2High:25,gain:12,gainFactor:0.04,priority:"med",condition:d=>d.hotWater>20},
-  {id:"solarpv",title:"Panneaux solaires",desc:"Installation d'une production photovoltaïque ou complément d'une installation partielle pour réduire la consommation nette achetée.",costPerM2Low:35,costPerM2High:85,gain:18,gainFactor:0.08,priority:"low",condition:d=>d.type==="maison" && d.solarGain<30},
+function buildTargetBtns(){const c=document.getElementById("targetBtns");c.innerHTML="";DPE_THRESHOLDS.forEach(t=>{const b=document.createElement("button");b.textContent=t.letter;b.style.background=DPE_COLORS[t.letter];b.dataset.letter=t.letter;if(t.letter===targetDPE) b.classList.add("selected");b.onclick=()=>{if(targetDPE===t.letter){targetDPE=null;b.classList.remove("selected");}else{targetDPE=t.letter;document.querySelectorAll(".dpe-target-btns button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");}buildScale(lastDPE);buildTravauxBox();};c.appendChild(b);});}
+function buildScale(active){const scale=document.getElementById("dpeScale");scale.innerHTML="";DPE_THRESHOLDS.forEach((row,idx)=>{const min=idx===0?0:DPE_THRESHOLDS[idx-1].max;const maxLabel=row.max===Infinity?">"+DPE_THRESHOLDS[idx-1].max:`${min} – ${row.max}`;const div=document.createElement("div");let cls="dpe-row";if(row.letter===active) cls+=" active";if(row.letter===targetDPE && row.letter!==active) cls+=" target-row";div.className=cls;div.style.background=DPE_COLORS[row.letter];let extra="";if(row.letter===targetDPE && row.letter!==active) extra=' <span style="font-size:11px;opacity:.9">← cible</span>';div.innerHTML=`<div>${row.letter}</div><div>Classe ${row.letter}${extra}</div><div>${maxLabel} kWhEP/m²</div>`;scale.appendChild(div);});}
+const ENEDIS_API_BASE = "https://opendata.enedis.fr/data-fair/api/v1/datasets/consommation-annuelle-residentielle-par-adresse/lines";
+// CORS proxy nécessaire car l'API GRDF ne retourne pas les headers CORS requis par les navigateurs
+const CORS_PROXY = "https://corsproxy.io/?";
+// Datasets GRDF connus (par ordre de priorité, le premier disponible sera utilisé)
+const GRDF_DATASETS = [
+  "consommation-annuelle-de-gaz-par-iris-et-code-naf0",
+  "conso-naf-iris-grdf",
+  "consommation-annuelle-gaz-par-iris"
 ];
-
-function computeCost(t, surface){
-  let low=t.costPerM2Low, high=t.costPerM2High;
-  if(t.id==="solarpv" && lastData && lastData.solarGain>0){
-    low = Math.round(low * 0.55);
-    high = Math.round(high * 0.60);
-  }
-  return {
-    low: Math.round(low * surface),
-    high: Math.round(high * surface),
-    mid: Math.round((low + high) / 2 * surface)
-  };
-}
-
-let lastData=null;
-let lastDPE=null;
-let lastConsumption=0;
-let travauxChecked={};
-let travauxDevis={};
-
-function evaluateSelection(applicable, selectedIds){
-  let sim=lastConsumption;
-  applicable.forEach(t=>{
-    if(selectedIds.includes(t.id)){
-      sim=Math.max(40, sim - sim*t.gainFactor);
-    }
-  });
-  sim=Math.round(sim);
-  const dpe=getDPE(sim);
-  const totalCost=selectedIds.reduce((sum,id)=>{
-    const t=applicable.find(x=>x.id===id);
-    if(!t) return sum;
-    const devis=travauxDevis[id];
-    const cost=devis!==undefined?Number(devis):computeCost(t,lastData.surface).mid;
-    return sum + cost;
-  },0);
-  return {consumption:sim, dpe, totalCost};
-}
-
-function getCheapestTargetSelection(applicable){
-  if(!targetDPE) return {autoChecked:{}, attainable:true};
-  const targetIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===targetDPE);
-  const currentIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===lastDPE);
-  if(targetIdx<0 || currentIdx<0 || targetIdx>=currentIdx) return {autoChecked:{}, attainable:true};
-
-  let best=null;
-  const n=applicable.length;
-  for(let mask=1; mask < (1<<n); mask++){
-    const ids=[];
-    for(let i=0;i<n;i++){
-      if(mask & (1<<i)) ids.push(applicable[i].id);
-    }
-    const result=evaluateSelection(applicable, ids);
-    const resultIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===result.dpe);
-    if(resultIdx<=targetIdx){
-      const candidate={
-        ids,
-        totalCost:result.totalCost,
-        consumption:result.consumption,
-        workCount:ids.length
-      };
-      if(
-        !best ||
-        candidate.totalCost < best.totalCost ||
-        (candidate.totalCost === best.totalCost && candidate.consumption < best.consumption) ||
-        (candidate.totalCost === best.totalCost && candidate.consumption === best.consumption && candidate.workCount < best.workCount)
-      ){
-        best=candidate;
+let realLookupState = {elecKwh:null,gazKwh:null,perM2:null,isHybridValid:false,details:"",queryProvided:false};
+let realLookupTimer=null; let realLookupSeq=0;
+function normalizeText(value){return String(value||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[,'’\-]/g," ").replace(/\s+/g," ").trim();}
+function getDepartmentCode(){const raw=document.getElementById("departement").value||"";return raw?raw.split("|")[0]:"";}
+async function fetchEnedisLines(query,size=20){const url=`${ENEDIS_API_BASE}?size=${size}&q=${encodeURIComponent(query)}`;const res=await fetch(url);if(!res.ok) throw new Error("enedis_lookup_failed");const data=await res.json();return data.results||[];}
+function getRowNumber(row,candidates){for(const key of candidates){const raw=row[key];const n=Number(raw);if(Number.isFinite(n)&&n>0) return n;}return 0;}
+function extractAddressAnnualKwh(row){return getRowNumber(row,["consommation_annuelle_moyenne_par_site_de_ladresse_mwh","consommation_annuelle_moyenne_par_logement_de_ladresse_mwh","consommation_annuelle_moyenne_par_logement_mwh","consommation_annuelle_moyenne_par_site_mwh"])*1000;}
+function rowAddressMatchScore(row,address,city,depCode){const rowAddr=normalizeText(row.adresse||"");const rowCity=normalizeText(row.nom_commune||"");const rowDep=String(row.code_departement||"");const nAddress=normalizeText(address);const nCity=normalizeText(city);let score=0;if(depCode&&rowDep===depCode) score+=3;if(nCity&&rowCity===nCity) score+=4;if(nAddress){if(rowAddr===nAddress) score+=8;else if(rowAddr.includes(nAddress)||nAddress.includes(rowAddr)) score+=5;const addressTokens=nAddress.split(" ").filter(Boolean);const overlap=addressTokens.filter(t=>rowAddr.includes(t)).length;score+=Math.min(4,overlap);}return score;}
+async function getIRISFromAddress(address,city){
+  try{
+    // API géocodage IGN / adresse.data.gouv.fr
+    const q=encodeURIComponent(address+" "+city);
+    // Essai 1 : API IGN Géoplateforme
+    try{
+      const url=`https://data.geopf.fr/geocodage/search?q=${q}&limit=1`;
+      const res=await fetch(url);
+      const data=await res.json();
+      if(data.features&&data.features.length){
+        const props=data.features[0].properties;
+        // Plusieurs noms de champs possibles selon la version de l'API
+        const iris=props.code_iris||props.iris_code||props.code_iris_2023||props.iris||null;
+        if(iris) return iris;
+      }
+    }catch(e){}
+    // Essai 2 : API adresse.data.gouv.fr (plus fiable, géocode puis reverse vers IRIS)
+    const urlBan=`https://api-adresse.data.gouv.fr/search/?q=${q}&limit=1`;
+    const resBan=await fetch(urlBan);
+    const dataBan=await resBan.json();
+    if(dataBan.features&&dataBan.features.length){
+      const feat=dataBan.features[0];
+      const lon=feat.geometry.coordinates[0];
+      const lat=feat.geometry.coordinates[1];
+      // Reverse geocode vers IRIS via l'API contours IRIS de l'INSEE
+      const urlIris=`https://geo.api.gouv.fr/communes?lon=${lon}&lat=${lat}&fields=code,nom&format=json`;
+      const resIris=await fetch(urlIris);
+      const dataIris=await resIris.json();
+      // L'API communes ne retourne pas l'IRIS directement — on reconstruit le code IRIS à partir
+      // du code INSEE commune + coordonnées via l'API découpage administratif
+      if(dataIris&&dataIris.length){
+        const codeCommune=dataIris[0].code;
+        const urlIrisBd=`https://api-adresse.data.gouv.fr/reverse/?lon=${lon}&lat=${lat}`;
+        const resRev=await fetch(urlIrisBd);
+        const dataRev=await resRev.json();
+        if(dataRev.features&&dataRev.features.length){
+          const rp=dataRev.features[0].properties;
+          const iris=rp.code_iris||rp.iris||null;
+          if(iris) return iris;
+          // Fallback: construire l'IRIS depuis le code commune (5 chiffres) + "0000" comme IRIS générique
+          // Cela permet au moins d'interroger GRDF même sans IRIS précis
+          if(codeCommune) return codeCommune+"0000";
+        }
       }
     }
-  }
-
-  const autoChecked={};
-  if(best){
-    best.ids.forEach(id=>autoChecked[id]=true);
-    return {autoChecked, attainable:true};
-  }
-  return {autoChecked:{}, attainable:false};
+  }catch(e){}
+  return null;
 }
+async function fetchGRDFConsumption(iris){
+  // Essaie plusieurs noms de datasets dans l'ordre
+  for(const dataset of GRDF_DATASETS){
+    try{
+      // Guillemets simples requis par ODS v2.1 (les guillemets doubles causent une erreur)
+      // CORS proxy requis car opendata.grdf.fr ne retourne pas Access-Control-Allow-Origin
+      const rawUrl=`https://opendata.grdf.fr/api/explore/v2.1/catalog/datasets/${dataset}/records?where=code_iris%3D'${encodeURIComponent(iris)}'&limit=50`;
+      const url=CORS_PROXY+encodeURIComponent(rawUrl);
+      const res=await fetch(url);
+      if(!res.ok) continue;
+      const data=await res.json();
+      if(!data.results||!data.results.length) continue;
 
-function buildTravauxBox(){
-  if(!lastData) return;
-  const card=document.getElementById("travauxCard");
-  card.style.display="block";
+      const looksResidential=(row)=>{
+        const text=[
+          row.secteur,row.libelle_secteur,row.usage,row.categorie,
+          row.code_naf0,row.libelle_code_naf0,row.code_naf,row.libelle_naf,
+          row.type_client,row.segment_de_clientele,row.profil_de_consommation
+        ].filter(Boolean).join(" ").toLowerCase();
+        return text.includes("resident")||text.includes("résident")||
+               text.includes("menage")||text.includes("ménage")||
+               text.includes("particulier")||text.includes("habitation")||
+               text.includes("rf")||  // code segment résidentiel GRDF
+               text.includes("r1")||text.includes("r2")||text.includes("r3");
+      };
 
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  const recommendation=getCheapestTargetSelection(applicable);
-  const autoChecked=recommendation.autoChecked || {};
-  const note=document.getElementById("targetNote");
+      const getConso=(row)=>{
+        // Liste élargie de noms de champs possibles selon la version du dataset
+        const candidates=[
+          row.consommation_annuelle_mwh,row.consommation_mwh,row.conso_mwh,
+          row.consommation,row.conso_totale_mwh,row.energie_mwh,
+          row.volume_mwh,row.quantite_mwh
+        ];
+        for(const v of candidates){const n=Number(v);if(Number.isFinite(n)&&n>0) return n;}
+        return 0;
+      };
 
-  applicable.forEach(t=>{
-    travauxChecked[t.id]=!!autoChecked[t.id];
-  });
+      const getNb=(row)=>{
+        const candidates=[
+          row.nb_points_de_livraison,row.nombre_de_points_de_livraison,
+          row.nb_pdl,row.nombre_pdl,row.nb_clients,row.nombre_clients,
+          row.nb_sites,row.nombre_sites,row.pdl
+        ];
+        for(const v of candidates){const n=Number(v);if(Number.isFinite(n)&&n>0) return n;}
+        return 0;
+      };
 
-  if(targetDPE && !recommendation.attainable){
-    note.style.display="block";
-    note.textContent=`La classe ${targetDPE} n’est pas atteignable avec les travaux actuellement disponibles dans ce simulateur.`;
-  } else {
-    note.style.display="none";
-    note.textContent="";
-  }
+      let candidates=data.results.filter(looksResidential);
+      if(!candidates.length) candidates=data.results;
 
-  renderTravauxList(applicable);
-  updateDPEFinal();
-  updateRecap();
-}
+      const selected=candidates
+        .map(r=>({row:r,conso:getConso(r),nb:getNb(r),year:Number(r.annee||r.millesime||r.annee_donnees||0)}))
+        .filter(x=>x.conso>0&&x.nb>0)
+        .sort((a,b)=>(b.year-a.year)||(b.nb-a.nb))[0];
 
-function getGainColor(gainPerEuro){
-  // gainPerEuro = gainFactor / costPerM2Mid (kWhEP/m²/an per €/m²)
-  if(gainPerEuro>=0.0020) return{bg:"#e05d3a",label:"Très rentable"};
-  if(gainPerEuro>=0.0010) return{bg:"#e09a2a",label:"Rentable"};
-  return{bg:"#5a9e6f",label:"Rentabilité modérée"};
-}
-
-function renderTravauxList(applicable){
-  const list=document.getElementById("travauxList");
-  const surface=lastData?lastData.surface:60;
-  list.innerHTML="";
-  applicable.forEach(t=>{
-    const checked=!!travauxChecked[t.id];
-    const devisVal=travauxDevis[t.id]!==undefined?travauxDevis[t.id]:"";
-    const cost=computeCost(t,surface);
-    const displayCost=devisVal!==""?`${Number(devisVal).toLocaleString("fr-FR")} €`:`${cost.low.toLocaleString("fr-FR")} € à ${cost.high.toLocaleString("fr-FR")} €`;
-    // Ratio gain/coût : gainFactor / costPerM2Mid
-    const costPerM2Mid=(t.costPerM2Low+t.costPerM2High)/2;
-    const gainPerEuro=costPerM2Mid>0?t.gainFactor/costPerM2Mid:0;
-    const {bg:gainBg}=getGainColor(gainPerEuro);
-    const div=document.createElement("div");
-    div.className="travail-item"+(checked?" checked":"");
-    div.innerHTML=`
-      <input type="checkbox" id="cb_${t.id}" ${checked?"checked":""} onchange="onTravauxChange('${t.id}',this.checked)"/>
-      <div class="travail-body">
-        <div class="travail-title">${t.title}</div>
-        <div class="travail-desc">${t.desc}</div>
-        <div class="travail-meta">
-          <span class="badge-tag" id="costbadge_${t.id}">Coût indicatif : ${displayCost}</span>
-          <span class="badge-tag" id="gainbadge_${t.id}" style="background:${gainBg};color:#fff;">Gain estimé : ${t.gain} kWhEP/m²/an</span>
-        </div>
-        <div class="travail-devis-row">
-          <label for="devis_${t.id}">Coût selon devis :</label>
-          <input type="number" id="devis_${t.id}" placeholder="ex : ${cost.mid}" value="${devisVal}" oninput="onDevisChange('${t.id}',this.value)" />
-          <span class="hint">(prend le dessus sur le coût indicatif)</span>
-        </div>
-      </div>`;
-    list.appendChild(div);
-  });
-  updateCostTotal(applicable);
-}
-
-function syncTravauxDom(applicable){
-  const surface=lastData?lastData.surface:60;
-  applicable.forEach(t=>{
-    const cb=document.getElementById("cb_"+t.id);
-    const item=cb?cb.closest(".travail-item"):null;
-    if(cb) cb.checked=!!travauxChecked[t.id];
-    if(item) item.classList.toggle("checked", !!travauxChecked[t.id]);
-    const badge=document.getElementById("costbadge_"+t.id);
-    if(badge){
-      const cost=computeCost(t,surface);
-      const devis=travauxDevis[t.id];
-      const displayCost=devis!==undefined && devis!=="" ? `${Number(devis).toLocaleString("fr-FR")} €` : `${cost.low.toLocaleString("fr-FR")} € à ${cost.high.toLocaleString("fr-FR")} €`;
-      badge.textContent=`Coût indicatif : ${displayCost}`;
+      if(!selected) continue;
+      return (selected.conso*1000)/selected.nb; // MWh → kWh, divisé par nb PDL
+    }catch(e){
+      continue; // essaie le dataset suivant
     }
-  });
-}
-
-function refreshAutoRecommendation(){
-  if(!lastData || !targetDPE) return;
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  const recommendation=getCheapestTargetSelection(applicable);
-  const autoChecked=recommendation.autoChecked || {};
-  const note=document.getElementById("targetNote");
-  applicable.forEach(t=>{
-    travauxChecked[t.id]=!!autoChecked[t.id];
-  });
-  if(!recommendation.attainable){
-    note.style.display="block";
-    note.textContent=`La classe ${targetDPE} n’est pas atteignable avec les travaux actuellement disponibles dans ce simulateur.`;
-  } else {
-    note.style.display="none";
-    note.textContent="";
   }
-  syncTravauxDom(applicable);
-  updateDPEFinal();
-  updateCostTotal(applicable);
-  updateRecap();
+  return null; // aucun dataset n'a fonctionné
 }
-
-function onTravauxChange(id,val){
-  travauxChecked[id]=val;
-  const item=document.getElementById("cb_"+id).closest(".travail-item");
-  if(val) item.classList.add("checked"); else item.classList.remove("checked");
-  updateDPEFinal();
-  updateCostTotal(TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData)));
-  updateRecap();
+async function lookupRealConsumption(){
+  const address=document.getElementById("addressInput").value.trim();
+  const city=document.getElementById("cityInput").value.trim();
+  const depCode=getDepartmentCode();
+  const surface=Number(document.getElementById("surface").value||0);
+  const lookupReady=!!(address&&city&&depCode);
+  realLookupState={elecKwh:null,gazKwh:null,perM2:null,isHybridValid:false,details:"",queryProvided:lookupReady};
+  if(!lookupReady||!surface){return realLookupState;}
+  const dbg=[];
+  try{
+    dbg.push("🔍 Recherche ENEDIS...");
+    const rows=await fetchEnedisLines([address,city,depCode].filter(Boolean).join(" "),30);
+    dbg.push(`→ ${rows.length} ligne(s) ENEDIS`);
+    const scored=rows.map(r=>({row:r,score:rowAddressMatchScore(r,address,city,depCode)}));
+    const best=scored.filter(x=>x.score>=6).sort((a,b)=>b.score-a.score)[0];
+    if(best){dbg.push(`→ Correspondance : "${best.row.adresse||""}" (score ${best.score})`);}
+    else{dbg.push(`→ Aucune correspondance suffisante (seuil ≥6). Scores : ${scored.slice(0,3).map(x=>x.score).join(", ")||"aucun"}`);}
+    let elecData=null;
+    if(best){const annualKwh=extractAddressAnnualKwh(best.row);dbg.push(`→ Élec : ${annualKwh} kWh/an`);if(annualKwh>0) elecData=annualKwh;}
+    dbg.push("🔍 Géocodage IRIS...");
+    const iris=await getIRISFromAddress(address,city);
+    dbg.push(`→ IRIS : ${iris||"non trouvé"}`);
+    let gaz=null;
+    if(iris){
+      dbg.push(`🔍 GRDF pour IRIS ${iris}...`);
+      gaz=await fetchGRDFConsumption(iris);
+      dbg.push(`→ Gaz : ${gaz!==null?Math.round(gaz)+" kWh/logement/an":"non trouvé"}`);
+    }
+    const dbgHtml="<br><small style='font-family:monospace;color:#888'>"+dbg.join("<br>")+"</small>";
+    if(elecData&&gaz){
+      const total=elecData+gaz;
+      realLookupState={elecKwh:elecData,gazKwh:gaz,perM2:Math.max(1,Math.round(total/surface)),isHybridValid:true,
+        details:"Consommation électrique à l'adresse + gaz résidentiel estimé à l'échelle IRIS"+dbgHtml,queryProvided:true};
+    } else {
+      let msg=elecData?"✅ Électricité trouvée, mais ❌ gaz GRDF introuvable sur cet IRIS.":"❌ Électricité ENEDIS introuvable à cette adresse.";
+      if(!iris) msg+=" Géocodage sans résultat IRIS.";
+      realLookupState={elecKwh:elecData,gazKwh:gaz,perM2:null,isHybridValid:false,
+        details:msg+dbgHtml,queryProvided:true};
+    }
+  }catch(e){
+    realLookupState={elecKwh:null,gazKwh:null,perM2:null,isHybridValid:false,
+      details:`Erreur : ${e.message}`,queryProvided:lookupReady};
+  }
+  return realLookupState;
 }
-
+function scheduleRealLookup(){updateClimateFromDept();const address=document.getElementById("addressInput").value.trim();const city=document.getElementById("cityInput").value.trim();const depCode=getDepartmentCode();if(realLookupTimer) clearTimeout(realLookupTimer);if(!(address&&city&&depCode)){realLookupSeq++;realLookupState={elecKwh:null,gazKwh:null,perM2:null,isHybridValid:false,details:"",queryProvided:false};calculateDPE();return;}const seq=++realLookupSeq;realLookupTimer=setTimeout(async()=>{const currentSeq=seq;await lookupRealConsumption();if(currentSeq===realLookupSeq){calculateDPE();}},350);}
+function getDPE(value){for(const row of DPE_THRESHOLDS){if(value<row.max) return row.letter;}return "G";}
+function toggleTypeFields(){const type=document.getElementById("housingType").value;document.querySelectorAll(".show-if-house").forEach(el=>{el.style.display=type==="maison"?"flex":"none";});document.querySelectorAll(".show-if-apartment").forEach(el=>{el.style.display=type==="appartement"?"flex":"none";});}
+function collectData(){const type=document.getElementById("housingType").value;const year=Number(document.getElementById("year").value||1975);let yearFactor=1.0;if(year<1948) yearFactor=1.28;else if(year<1975) yearFactor=1.18;else if(year<1990) yearFactor=1.08;else if(year<2005) yearFactor=0.98;else if(year<2013) yearFactor=0.88;else yearFactor=0.76;const compactnessFactor=type==="appartement"?0.94:1.08;const apartmentFloorFactor=type==="appartement"?Number(document.getElementById("apartmentFloor").value||1):1;const solarGain=type==="maison"?Number(document.getElementById("solar").value||0):0;return{type,surface:Number(document.getElementById("surface").value||60),climate:getClimateFactor(),heating:Number(document.getElementById("heating").value||1),hotWater:Number(document.getElementById("hotWater").value||24),walls:Number(document.getElementById("walls").value||1),roof:Number(document.getElementById("roof").value||1),floorIns:Number(document.getElementById("floorIns").value||1),windows:Number(document.getElementById("windows").value||1),ventilation:Number(document.getElementById("ventilation").value||1),facades:Number(document.getElementById("facades").value||1),yearFactor,compactnessFactor,apartmentFloorFactor,solarGain};}
+function computeConsumption(d){const baseNeed=125;const envelope=d.yearFactor*d.climate*d.walls*d.roof*d.floorIns*d.windows*d.ventilation*d.facades*d.compactnessFactor*d.apartmentFloorFactor;return Math.round(Math.max(40,baseNeed*envelope*d.heating+d.hotWater+16-d.solarGain));}
+function getStrengthsWeaknesses(d){const strengths=[],weaknesses=[];if(d.walls<=0.90) strengths.push("Bonne isolation des murs");else if(d.walls>1.1) weaknesses.push("Murs faiblement isolés (pertes latérales importantes)");if(d.roof<=0.88) strengths.push("Toiture bien isolée");else if(d.roof>1.1) weaknesses.push("Toiture peu isolée (poste souvent prioritaire)");if(d.floorIns<=0.92) strengths.push("Plancher bas bien isolé");else if(d.floorIns>1.05) weaknesses.push("Plancher bas peu isolé");if(d.windows<=0.95) strengths.push("Fenêtres performantes");else if(d.windows>1.1) weaknesses.push("Fenêtres peu performantes (inconfort & déperditions)");if(d.heating<=0.85) strengths.push("Système de chauffage performant");else if(d.heating>1.1) weaknesses.push("Système de chauffage énergivore");if(d.ventilation<=0.96) strengths.push("Ventilation maîtrisée");else if(d.ventilation>1.04) weaknesses.push("Ventilation peu maîtrisée");if(d.type==="maison"&&d.solarGain>0) strengths.push("Production solaire réduisant la consommation nette");if(d.type==="appartement"&&d.apartmentFloorFactor<1) strengths.push("Étage intermédiaire thermiquement favorable");else if(d.type==="appartement"&&d.apartmentFloorFactor>1.02) weaknesses.push("Position du logement moins favorable (RdC ou dernier étage)");if(!strengths.length) strengths.push("Aucun point fort identifié dans cette simulation");if(!weaknesses.length) weaknesses.push("Aucun point faible majeur identifié");return{strengths,weaknesses};}
+function buildSWGrid(d){const grid=document.getElementById("swGrid");const {strengths,weaknesses}=getStrengthsWeaknesses(d);grid.style.display="grid";grid.innerHTML=`<div class="sw-box strengths"><h3>✅ Points forts</h3><ul>${strengths.map(s=>`<li>${s}</li>`).join("")}</ul></div><div class="sw-box weaknesses"><h3>⚠️ Points faibles</h3><ul>${weaknesses.map(w=>`<li>${w}</li>`).join("")}</ul></div>`;}
+const TRAVAUX_CATALOGUE=[{id:"walls",title:"Isolation des murs",desc:"Réduit fortement les déperditions latérales, surtout si les murs sont peu isolés.",costPerM2Low:80,costPerM2High:160,gain:24,gainFactor:0.12,priority:"high",condition:d=>d.walls>0.95},{id:"roof",title:"Isolation de la toiture",desc:"Souvent le geste le plus rentable : les combles perdus représentent jusqu'à 30% des déperditions.",costPerM2Low:25,costPerM2High:55,gain:18,gainFactor:0.10,priority:"high",condition:d=>d.roof>0.95},{id:"floorIns",title:"Isolation du plancher bas",desc:"Limite les pertes par le sol, surtout pour les RdC ou maisons.",costPerM2Low:20,costPerM2High:50,gain:10,gainFactor:0.07,priority:"med",condition:d=>d.floorIns>0.95},{id:"windows",title:"Remplacement des fenêtres",desc:"Double ou triple vitrage pour réduire les ponts thermiques et améliorer le confort.",costPerM2Low:40,costPerM2High:90,gain:14,gainFactor:0.08,priority:"med",condition:d=>d.windows>0.95},{id:"heating",title:"Remplacement du chauffage (PAC)",desc:"Une pompe à chaleur air/eau est nettement plus efficace que des convecteurs ou une chaudière standard.",costPerM2Low:60,costPerM2High:110,gain:30,gainFactor:0.18,priority:"high",condition:d=>d.heating>0.90},{id:"ventilation",title:"Amélioration de la ventilation",desc:"Une VMC double-flux réduit les pertes liées au renouvellement d'air.",costPerM2Low:20,costPerM2High:45,gain:8,gainFactor:0.06,priority:"low",condition:d=>d.ventilation>0.97},{id:"hotWater",title:"Chauffe-eau thermodynamique",desc:"Divise par 3 la consommation électrique liée à l'ECS par rapport à un ballon standard.",costPerM2Low:10,costPerM2High:25,gain:12,gainFactor:0.04,priority:"med",condition:d=>d.hotWater>20}];
+function computeCost(t,surface){return{low:Math.round(t.costPerM2Low*surface),high:Math.round(t.costPerM2High*surface),mid:Math.round((t.costPerM2Low+t.costPerM2High)/2*surface)}}
+let lastData=null,lastDPE=null,lastConsumption=0,travauxChecked={},travauxDevis={};
+function evaluateSelection(applicable,selectedIds){let sim=lastConsumption;applicable.forEach(t=>{if(selectedIds.includes(t.id)){sim=Math.max(40,sim-sim*t.gainFactor);}});sim=Math.round(sim);const dpe=getDPE(sim);const totalCost=selectedIds.reduce((sum,id)=>{const t=applicable.find(x=>x.id===id);if(!t) return sum;const devis=travauxDevis[id];const cost=devis!==undefined?Number(devis):computeCost(t,lastData.surface).mid;return sum+cost;},0);return{consumption:sim,dpe,totalCost};}
+function getCheapestTargetSelection(applicable){if(!targetDPE) return {};const targetIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===targetDPE);const currentIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===lastDPE);if(targetIdx<0||currentIdx<0||targetIdx>=currentIdx) return {};let best=null;const n=applicable.length;for(let mask=1;mask<(1<<n);mask++){const ids=[];for(let i=0;i<n;i++){if(mask&(1<<i)) ids.push(applicable[i].id);}const result=evaluateSelection(applicable,ids);const resultIdx=DPE_THRESHOLDS.findIndex(t=>t.letter===result.dpe);if(resultIdx<=targetIdx){const candidate={ids,totalCost:result.totalCost,consumption:result.consumption,workCount:ids.length};if(!best||candidate.totalCost<best.totalCost||(candidate.totalCost===best.totalCost&&candidate.consumption<best.consumption)||(candidate.totalCost===best.totalCost&&candidate.consumption===best.consumption&&candidate.workCount<best.workCount)){best=candidate;}}}const autoChecked={};if(best){best.ids.forEach(id=>autoChecked[id]=true);}if(!best && targetDPE){
+    const msg=document.getElementById("targetMessage");
+    if(msg){
+      msg.style.display="block";
+      msg.textContent="DPE cible inatteignable avec les travaux disponibles.";
+    }
+  } else {
+    const msg=document.getElementById("targetMessage");
+    if(msg){
+      msg.style.display="none";
+      msg.textContent="";
+    }
+  }
+  return autoChecked;}
+function buildTravauxBox(){if(!lastData) return;const card=document.getElementById("travauxCard");card.style.display="block";const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));const autoChecked=getCheapestTargetSelection(applicable);applicable.forEach(t=>{travauxChecked[t.id]=!!autoChecked[t.id];});renderTravauxList(applicable);updateDPEFinal();updateRecap();}
+function getGainColor(gainPerEuro){if(gainPerEuro>=0.0020) return{bg:"#e05d3a",label:"Très rentable"};if(gainPerEuro>=0.0010) return{bg:"#e09a2a",label:"Rentable"};return{bg:"#5a9e6f",label:"Rentabilité modérée"};}
+function renderTravauxList(applicable){const list=document.getElementById("travauxList");const surface=lastData?lastData.surface:60;list.innerHTML="";applicable.forEach(t=>{const checked=!!travauxChecked[t.id];const devisVal=travauxDevis[t.id]!==undefined?travauxDevis[t.id]:"";const cost=computeCost(t,surface);const displayCost=devisVal!==""?`${Number(devisVal).toLocaleString("fr-FR")} €`:`${cost.low.toLocaleString("fr-FR")} € à ${cost.high.toLocaleString("fr-FR")} €`;const costPerM2Mid=(t.costPerM2Low+t.costPerM2High)/2;const gainPerEuro=costPerM2Mid>0?t.gainFactor/costPerM2Mid:0;const {bg:gainBg}=getGainColor(gainPerEuro);const div=document.createElement("div");div.className="travail-item"+(checked?" checked":"");div.innerHTML=`<input type="checkbox" id="cb_${t.id}" ${checked?"checked":""} onchange="onTravauxChange('${t.id}',this.checked)"/><div class="travail-body"><div class="travail-title">${t.title}</div><div class="travail-desc">${t.desc}</div><div class="travail-meta"><span class="badge-tag">Coût indicatif : ${displayCost}</span><span class="badge-tag" style="background:${gainBg};color:#fff;">Gain estimé : ${t.gain} kWhEP/m²/an</span></div><div class="travail-devis-row"><label for="devis_${t.id}">Coût selon devis :</label><input type="number" id="devis_${t.id}" placeholder="ex : ${cost.mid}" value="${devisVal}" oninput="onDevisChange('${t.id}',this.value)" /><span class="hint">(prend le dessus sur le coût indicatif)</span></div></div>`;list.appendChild(div);});updateCostTotal(applicable);}
+function onTravauxChange(id,val){travauxChecked[id]=val;const item=document.getElementById("cb_"+id).closest(".travail-item");if(val) item.classList.add("checked"); else item.classList.remove("checked");updateDPEFinal();updateCostTotal(TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData)));updateRecap();}
 function onDevisChange(id,val){
   travauxDevis[id]=val===""?undefined:val;
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  if(targetDPE){
-    refreshAutoRecommendation();
-  } else {
-    syncTravauxDom(applicable);
-    updateDPEFinal();
-    updateCostTotal(applicable);
-    updateRecap();
-  }
-}
 
-function updateCostTotal(applicable){
-  const box=document.getElementById("costTotal");
-  const val=document.getElementById("costTotalValue");
-  let total=0;
-  let anyChecked=false;
-  const surface=lastData?lastData.surface:60;
-  applicable.forEach(t=>{
-    if(travauxChecked[t.id]){
-      anyChecked=true;
-      const devis=travauxDevis[t.id];
-      total+=devis!==undefined?Number(devis):computeCost(t,surface).mid;
+  if(lastData){
+    const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
+    if(targetDPE){
+      const autoChecked=getCheapestTargetSelection(applicable);
+      applicable.forEach(t=>{
+        travauxChecked[t.id]=!!autoChecked[t.id];
+      });
+      renderTravauxList(applicable);
+    } else {
+      updateCostTotal(applicable);
     }
-  });
-  if(anyChecked){
-    box.style.display="flex";
-    val.textContent=Math.round(total).toLocaleString("fr-FR")+" €";
-  } else {
-    box.style.display="none";
   }
-}
 
-function updateDPEFinal(){
-  if(!lastData) return;
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  let sim=lastConsumption;
-  applicable.forEach(t=>{
-    if(travauxChecked[t.id]){
-      sim=Math.max(40,sim-sim*t.gainFactor);
-    }
-  });
-  sim=Math.round(sim);
-  const finalDPE=getDPE(sim);
-  const box=document.getElementById("dpeFinalBox");
-  const badge=document.getElementById("dpeFinalBadge");
-  const text=document.getElementById("dpeFinalText");
-  box.style.display="block";
-  badge.textContent=finalDPE;
-  badge.style.background=DPE_COLORS[finalDPE];
-  text.innerHTML=`Consommation estimée : <strong>${sim} kWhEP/m²/an</strong><br>avec les travaux sélectionnés.`;
-}
-
-function uncheckAll(){
-  travauxChecked={};
-  // Décocher aussi le DPE cible
-  targetDPE=null;
-  document.querySelectorAll(".dpe-target-btns button").forEach(x=>x.classList.remove("selected"));
-  document.getElementById("targetNote").style.display="none";
-  document.getElementById("targetNote").textContent="";
-  buildScale(lastDPE);
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>lastData&&t.condition(lastData));
-  renderTravauxList(applicable);
   updateDPEFinal();
   updateRecap();
 }
-
-// ── CONTRAT ÉNERGIE
-function toggleHC(){
-  const on=document.getElementById("hcToggle").checked;
-  document.getElementById("hcSection").style.display=on?"block":"none";
-  updateRecap();
-}
-
-function getEffectiveKwhPrice(){
-  const hcOn=document.getElementById("hcToggle").checked;
-  if(hcOn){
-    const hp=parseFloat(document.getElementById("prixHP").value)||0.246;
-    const hc=parseFloat(document.getElementById("prixHC").value)||0.183;
-    const pct=parseFloat(document.getElementById("pctHC").value)||40;
-    return hc*(pct/100)+hp*(1-pct/100);
-  }
-  return parseFloat(document.getElementById("prixKwh").value)||0.2516;
-}
-
-function updateRecap(){
-  if(!lastData) return;
-  const surface=lastData.surface;
-  const kwhPrice=getEffectiveKwhPrice();
-  const gazPrice=parseFloat(document.getElementById("prixGaz").value)||0.114;
-  const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));
-  const checked=applicable.filter(t=>travauxChecked[t.id]);
-
-  const recapCard=document.getElementById("recapCard");
-  if(!checked.length){ recapCard.style.display="none"; return; }
-  recapCard.style.display="block";
-
-  const tbody=document.getElementById("recapBody");
-  tbody.innerHTML="";
-
-  // Determine energy type from the selected option's data-energy attribute
-  const heatingSelect=document.getElementById("heating");
-  const energyType=heatingSelect.options[heatingSelect.selectedIndex].dataset.energy||"elec";
-  const isElectricHeating=energyType==="elec";
-  const pricePerKwh=isElectricHeating?kwhPrice:gazPrice;
-
-  // Facture annuelle totale actuelle
-  const factureAnnuelle=Math.round(lastConsumption*surface*pricePerKwh);
-
-  let totalEco=0, totalCost=0;
-  checked.forEach(t=>{
-    const cost=computeCost(t,surface);
-    const devis=travauxDevis[t.id];
-    const effectiveCost=devis!==undefined?Number(devis):cost.mid;
-    const gainKwh=Math.round(lastConsumption*t.gainFactor*surface);
-    const eco=Math.round(gainKwh*pricePerKwh);
-    const pctFacture=factureAnnuelle>0?Math.round(eco/factureAnnuelle*100):0;
-    const pm=eco>0?Math.round(effectiveCost/eco):null;
-    totalEco+=eco;
-    totalCost+=effectiveCost;
-
-    const tr=document.createElement("tr");
-    tr.className="checked-row";
-    tr.innerHTML=`
-      <td><strong>${t.title}</strong></td>
-      <td>${effectiveCost.toLocaleString("fr-FR")} €${devis!==undefined?' <span style="font-size:11px;color:#888">(devis)</span>':''}</td>
-      <td>${gainKwh.toLocaleString("fr-FR")} kWh/an</td>
-      <td class="eco">+ ${eco.toLocaleString("fr-FR")} €/an <span style="font-size:12px;opacity:.75">(${pctFacture}%)</span></td>
-      <td class="${pm&&pm<=30?'pm':'pm-neg'}">${pm?pm+' ans':'—'}</td>`;
-    tbody.appendChild(tr);
-  });
-
-  // Total row
-  const pctTotal=factureAnnuelle>0?Math.round(totalEco/factureAnnuelle*100):0;
-  const pmTotal=totalEco>0?Math.round(totalCost/totalEco):null;
-  const trTotal=document.createElement("tr");
-  trTotal.style.fontWeight="700";
-  trTotal.style.borderTop="2px solid var(--line)";
-  trTotal.innerHTML=`
-    <td>Total</td>
-    <td>${totalCost.toLocaleString("fr-FR")} €</td>
-    <td>—</td>
-    <td class="eco">+ ${totalEco.toLocaleString("fr-FR")} €/an <span style="font-size:12px;opacity:.75">(${pctTotal}%)</span></td>
-    <td class="${pmTotal&&pmTotal<=30?'pm':'pm-neg'}">${pmTotal?pmTotal+' ans':'—'}</td>`;
-  tbody.appendChild(trTotal);
-
-  // Note
-  const hcOn=document.getElementById("hcToggle").checked;
-  const energyLabel=isElectricHeating?"électricité":"gaz";
-  document.getElementById("recapNote").innerHTML=
-    `Prix unitaire utilisé : <strong>${pricePerKwh.toFixed(4)} €/kWh</strong> (${energyLabel}${hcOn&&isElectricHeating?", tarif HC/HP pondéré":""}).
-    Facture annuelle actuelle estimée : <strong>${factureAnnuelle.toLocaleString("fr-FR")} €/an</strong> (${lastConsumption} kWhEP/m²/an × ${surface} m²).
-    Les pourcentages indiquent la part de la facture annuelle économisée.`;
-}
-
-function calculateDPE(){
-  const data=collectData();
-  lastData=data;
-  const consumption=computeConsumption(data);
-  lastConsumption=consumption;
-  const dpe=getDPE(consumption);
-  lastDPE=dpe;
-
-  document.getElementById("consumptionValue").textContent=consumption;
-  const badge=document.getElementById("badge");
-  badge.textContent=dpe;
-  badge.style.background=DPE_COLORS[dpe];
-
-  let extra="";
-  if(data.type==="appartement") extra=data.apartmentFloorFactor<1?"L'étage intermédiaire améliore légèrement le comportement thermique.":"La position du logement pénalise légèrement la consommation.";
-  else extra=data.solarGain>0?"La présence de panneaux solaires améliore la consommation nette estimée.":"L'absence de panneaux solaires laisse un potentiel d'amélioration complémentaire.";
-  const mitoyText = data.type==="maison" ? (data.mitoyenneteFactor<1 ? " La mitoyenneté réduit aussi les déperditions par les murs extérieurs." : " Une maison isolée présente davantage de surfaces exposées.") : "";
-  const volumeText = data.ceilingHeight>=2.9 ? " La hauteur sous plafond élevée augmente aussi le volume à chauffer." : data.ceilingHeight<=2.4 ? " La hauteur sous plafond contenue limite légèrement le volume à chauffer." : "";
-  document.getElementById("summary").textContent=`Estimation indicative : le logement ressort en classe ${dpe} avec une consommation d'environ ${consumption} kWhEP/m²/an. ${extra}${mitoyText}${volumeText}`;
-
-  buildScale(dpe);
-  buildSWGrid(data);
-  buildTargetBtns();
-  buildTravauxBox();
-  updateDPEFinal();
-}
-
-function resetForm(){
-  // housingType: inchangé (ne pas toucher)
-  document.getElementById("surface").value=60;
-  document.getElementById("year").value=1975;
-  document.getElementById("ceilingHeight").value=2.5;
-  document.getElementById("departement").value="";
-  document.getElementById("climateHint").textContent="";
-  document.getElementById("heating").value="1.09";      // Je ne sais pas
-  document.getElementById("hotWater").value="28";        // Je ne sais pas
-  document.getElementById("walls").value="1.09";         // Je ne sais pas
-  document.getElementById("roof").value="1.08";          // Je ne sais pas
-  document.getElementById("floorIns").value="1.05";      // Je ne sais pas
-  document.getElementById("windows").value="1.00";       // Double vitrage
-  document.getElementById("ventilation").value="1.04";   // Je ne sais pas
-  document.getElementById("facades").value="0.96";       // 1
-  document.getElementById("apartmentFloor").value="0.96"; // Étage intermédiaire
-  document.getElementById("solar").value="0";
-  const mit = document.getElementById("mitoyennete"); if(mit) mit.value="1.10";
-  // Réinitialiser contrat énergie
-  document.getElementById("prixKwh").value="0.2516";
-  document.getElementById("prixGaz").value="0.1140";
-  document.getElementById("hcToggle").checked=false;
-  document.getElementById("hcSection").style.display="none";
-  document.getElementById("prixHC").value="0.1830";
-  document.getElementById("prixHP").value="0.2460";
-  document.getElementById("pctHC").value="40";
-  document.getElementById("consumptionValue").textContent="—";
-  document.getElementById("badge").textContent="—";
-  document.getElementById("badge").style.background="#94a3b8";
-  document.getElementById("summary").textContent="";
-  document.getElementById("swGrid").style.display="none";
-  document.getElementById("swGrid").innerHTML="";
-  document.getElementById("travauxCard").style.display="none";
-  document.getElementById("dpeFinalBox").style.display="none";
-  document.getElementById("recapCard").style.display="none";
-  document.getElementById("targetBtns").innerHTML="";
-  document.getElementById("targetNote").style.display="none";
-  document.getElementById("targetNote").textContent="";
-  lastData=null; lastDPE=null; lastConsumption=0; targetDPE=null; travauxChecked={}; travauxDevis={};
-  buildScale();
-  toggleTypeFields();
-  calculateDPE();
-}
-
-function loadDemo(kind){
-  resetForm();
-  if(kind==="apt-old"){
-    document.getElementById("housingType").value="appartement";
-    document.getElementById("surface").value=48;
-    document.getElementById("ceilingHeight").value=2.8;
-    document.getElementById("year").value=1955;
-    document.getElementById("walls").value="1.18";
-    document.getElementById("roof").value="1.16";
-    document.getElementById("windows").value="1.15";
-    document.getElementById("apartmentFloor").value="1.08";
-    document.getElementById("heating").value="1.18";
-  }
-  if(kind==="apt-top"){
-    document.getElementById("housingType").value="appartement";
-    document.getElementById("surface").value=72;
-    document.getElementById("ceilingHeight").value=2.5;
-    document.getElementById("year").value=1982;
-    document.getElementById("roof").value="1.16";
-    document.getElementById("apartmentFloor").value="1.07";
-    document.getElementById("windows").value="1.00";
-    document.getElementById("heating").value="1.00";
-  }
-  if(kind==="house-solar"){
-    document.getElementById("housingType").value="maison";
-    document.getElementById("surface").value=118;
-    document.getElementById("ceilingHeight").value=2.6;
-    document.getElementById("year").value=2008;
-    document.getElementById("walls").value="0.84";
-    document.getElementById("roof").value="0.82";
-    document.getElementById("floorIns").value="0.88";
-    document.getElementById("windows").value="0.88";
-    document.getElementById("heating").value="0.82";
-    document.getElementById("hotWater").value="18";
-    document.getElementById("solar").value="30";
-    const mit = document.getElementById("mitoyennete"); if(mit) mit.value="1.00";
-  }
-  toggleTypeFields();
-  calculateDPE();
-}
-
-buildScale();
-buildTargetBtns();
-toggleTypeFields();
-calculateDPE();
+function updateCostTotal(applicable){const box=document.getElementById("costTotal");const val=document.getElementById("costTotalValue");let total=0;let anyChecked=false;const surface=lastData?lastData.surface:60;applicable.forEach(t=>{if(travauxChecked[t.id]){anyChecked=true;const devis=travauxDevis[t.id];total+=devis!==undefined?Number(devis):computeCost(t,surface).mid;}});if(anyChecked){box.style.display="flex";val.textContent=Math.round(total).toLocaleString("fr-FR")+" €";}else{box.style.display="none";}}
+function updateDPEFinal(){if(!lastData) return;const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));let sim=lastConsumption;applicable.forEach(t=>{if(travauxChecked[t.id]){sim=Math.max(40,sim-sim*t.gainFactor);}});sim=Math.round(sim);const finalDPE=getDPE(sim);const box=document.getElementById("dpeFinalBox");const badge=document.getElementById("dpeFinalBadge");const text=document.getElementById("dpeFinalText");box.style.display="block";badge.textContent=finalDPE;badge.style.background=DPE_COLORS[finalDPE];text.innerHTML=`Consommation estimée : <strong>${sim} kWhEP/m²/an</strong><br>avec les travaux sélectionnés.`;}
+function uncheckAll(){travauxChecked={};targetDPE=null;document.querySelectorAll(".dpe-target-btns button").forEach(x=>x.classList.remove("selected"));buildScale(lastDPE);const applicable=TRAVAUX_CATALOGUE.filter(t=>lastData&&t.condition(lastData));renderTravauxList(applicable);updateDPEFinal();updateRecap();}
+function toggleHC(){const on=document.getElementById("hcToggle").checked;document.getElementById("hcSection").style.display=on?"block":"none";updateRecap();}
+function getEffectiveKwhPrice(){const hcOn=document.getElementById("hcToggle").checked;if(hcOn){const hp=parseFloat(document.getElementById("prixHP").value)||0.246;const hc=parseFloat(document.getElementById("prixHC").value)||0.183;const pct=parseFloat(document.getElementById("pctHC").value)||40;return hc*(pct/100)+hp*(1-pct/100);}return parseFloat(document.getElementById("prixKwh").value)||0.2516;}
+function updateRecap(){if(!lastData) return;const surface=lastData.surface;const kwhPrice=getEffectiveKwhPrice();const gazPrice=parseFloat(document.getElementById("prixGaz").value)||0.114;const applicable=TRAVAUX_CATALOGUE.filter(t=>t.condition(lastData));const checked=applicable.filter(t=>travauxChecked[t.id]);const recapCard=document.getElementById("recapCard");if(!checked.length){recapCard.style.display="none";return;}recapCard.style.display="block";const tbody=document.getElementById("recapBody");tbody.innerHTML="";const heatingSelect=document.getElementById("heating");const energyType=heatingSelect.options[heatingSelect.selectedIndex].dataset.energy||"elec";const isElectricHeating=energyType==="elec";const pricePerKwh=isElectricHeating?kwhPrice:gazPrice;const factureAnnuelle=Math.round(lastConsumption*surface*pricePerKwh);let totalEco=0,totalCost=0;checked.forEach(t=>{const cost=computeCost(t,surface);const devis=travauxDevis[t.id];const effectiveCost=devis!==undefined?Number(devis):cost.mid;const gainKwh=Math.round(lastConsumption*t.gainFactor*surface);const eco=Math.round(gainKwh*pricePerKwh);const pctFacture=factureAnnuelle>0?Math.round(eco/factureAnnuelle*100):0;const pm=eco>0?Math.round(effectiveCost/eco):null;totalEco+=eco;totalCost+=effectiveCost;const tr=document.createElement("tr");tr.className="checked-row";tr.innerHTML=`<td><strong>${t.title}</strong></td><td>${effectiveCost.toLocaleString("fr-FR")} €${devis!==undefined?' <span style="font-size:11px;color:#888">(devis)</span>':''}</td><td>${gainKwh.toLocaleString("fr-FR")} kWh/an</td><td class="eco">+ ${eco.toLocaleString("fr-FR")} €/an <span style="font-size:12px;opacity:.75">(${pctFacture}%)</span></td><td class="${pm&&pm<=30?'pm':'pm-neg'}">${pm?(pm===1?'1 an':pm+' ans'):'—'}</td>`;tbody.appendChild(tr);});const pctTotal=factureAnnuelle>0?Math.round(totalEco/factureAnnuelle*100):0;const pmTotal=totalEco>0?Math.round(totalCost/totalEco):null;const trTotal=document.createElement("tr");trTotal.style.fontWeight="700";trTotal.style.borderTop="2px solid var(--line)";trTotal.innerHTML=`<td>Total</td><td>${totalCost.toLocaleString("fr-FR")} €</td><td>—</td><td class="eco">+ ${totalEco.toLocaleString("fr-FR")} €/an <span style="font-size:12px;opacity:.75">(${pctTotal}%)</span></td><td class="${pmTotal&&pmTotal<=30?'pm':'pm-neg'}">${pmTotal?(pmTotal===1?'1 an':pmTotal+' ans'):'—'}</td>`;tbody.appendChild(trTotal);const hcOn=document.getElementById("hcToggle").checked;const energyLabel=isElectricHeating?"électricité":"gaz";document.getElementById("recapNote").innerHTML=`Prix unitaire utilisé : <strong>${pricePerKwh.toFixed(4)} €/kWh</strong> (${energyLabel}${hcOn&&isElectricHeating?", tarif HC/HP pondéré":""}). Facture annuelle actuelle estimée : <strong>${factureAnnuelle.toLocaleString("fr-FR")} €/an</strong> (${lastConsumption} kWhEP/m²/an × ${surface} m²). Les pourcentages indiquent la part de la facture annuelle économisée.`;}
+function calculateDPE(){const data=collectData();lastData=data;const estimatedConsumption=computeConsumption(data);const estimatedDPE=getDPE(estimatedConsumption);const realInfo=document.getElementById("realInfo");const useExactReal=realLookupState.isHybridValid===true&&data.surface>0;let activeConsumption=estimatedConsumption;let activeDPE=estimatedDPE;if(useExactReal){activeConsumption=realLookupState.perM2;activeDPE=getDPE(activeConsumption);const delta=activeConsumption-estimatedConsumption;const deltaAbs=Math.abs(delta);const deltaText=delta===0?"identique au DPE estimé":(delta<0?`${deltaAbs} kWh/m²/an de moins que l’estimation`:`${deltaAbs} kWh/m²/an de plus que l’estimation`);realInfo.style.display="block";realInfo.innerHTML=`<strong>DPE observé hybride</strong><br>Basé sur les données suivantes :<br><br>⚡ Électricité à l’adresse : <strong>${Math.round(realLookupState.elecKwh).toLocaleString("fr-FR")} kWh/an</strong><br>🔥 Gaz estimé à l’échelle IRIS : <strong>${Math.round(realLookupState.gazKwh).toLocaleString("fr-FR")} kWh/an</strong><br><br>Consommation hybride retenue : <strong>${activeConsumption} kWh/m²/an</strong><br><br>DPE estimé initial : <strong>${estimatedDPE}</strong> (${estimatedConsumption} kWhEP/m²/an)<br>Écart : <strong>${deltaText}</strong><br><br><em>Ce résultat combine une consommation électrique observée à l’adresse et une estimation du gaz à l’échelle IRIS. Il reste indicatif.</em>`;}else if(realLookupState.queryProvided){realInfo.style.display="block";realInfo.innerHTML=`<strong>Données réelles incomplètes</strong><br>Raison : erreur de match entre IRIS et adresse.<br><br>Le résultat affiché reste donc une estimation.`;}else{realInfo.style.display="none";realInfo.innerHTML="";}lastConsumption=activeConsumption;lastDPE=activeDPE;document.getElementById("consumptionValue").textContent=activeConsumption;document.querySelector(".metric-sub").textContent=useExactReal?"kWhEP / m² / an observés":"kWhEP / m² / an estimés";const badge=document.getElementById("badge");badge.textContent=activeDPE;badge.style.background=DPE_COLORS[activeDPE];let extra="";if(data.type==="appartement"){extra=data.apartmentFloorFactor<1?"L'étage intermédiaire améliore légèrement le comportement thermique.":"La position du logement pénalise légèrement la consommation.";}else{extra=data.solarGain>0?"La présence de panneaux solaires améliore la consommation nette estimée.":"L'absence de panneaux solaires laisse un potentiel d'amélioration.";}if(useExactReal){const delta=activeConsumption-estimatedConsumption;const direction=delta<0?"plus favorable":delta>0?"plus défavorable":"quasi identique";document.getElementById("summary").textContent=`Le logement est affiché en classe ${activeDPE} sur la base d’un DPE observé hybride (${activeConsumption} kWh/m²/an). Le DPE estimé initial était ${estimatedDPE} (${estimatedConsumption} kWhEP/m²/an), soit un profil ${direction}. ${extra}`;}else{document.getElementById("summary").textContent=`Le logement est affiché en classe ${activeDPE} sur la base d’une estimation (${activeConsumption} kWh/m²/an). ${extra}`;}buildScale(activeDPE);buildSWGrid(data);buildTargetBtns();buildTravauxBox();updateDPEFinal();}
+function resetForm(){document.getElementById("surface").value=60;document.getElementById("addressInput").value="";document.getElementById("cityInput").value="";document.getElementById("year").value=1975;document.getElementById("departement").value="";document.getElementById("climateHint").textContent="";document.getElementById("heating").value="1.09";document.getElementById("hotWater").value="28";document.getElementById("walls").value="1.09";document.getElementById("roof").value="1.08";document.getElementById("floorIns").value="1.05";document.getElementById("windows").value="1.00";document.getElementById("ventilation").value="1.04";document.getElementById("facades").value="0.96";document.getElementById("apartmentFloor").value="0.96";document.getElementById("solar").value="0";document.getElementById("prixKwh").value="0.2516";document.getElementById("prixGaz").value="0.1140";document.getElementById("hcToggle").checked=false;document.getElementById("hcSection").style.display="none";document.getElementById("prixHC").value="0.1830";document.getElementById("prixHP").value="0.2460";document.getElementById("pctHC").value="40";document.getElementById("consumptionValue").textContent="—";document.getElementById("badge").textContent="—";document.getElementById("badge").style.background="#94a3b8";document.getElementById("summary").textContent="";document.getElementById("realInfo").style.display="none";document.getElementById("realInfo").innerHTML="";document.getElementById("swGrid").style.display="none";document.getElementById("swGrid").innerHTML="";document.getElementById("travauxCard").style.display="none";document.getElementById("dpeFinalBox").style.display="none";document.getElementById("recapCard").style.display="none";document.getElementById("targetBtns").innerHTML="";lastData=null;lastDPE=null;lastConsumption=0;targetDPE=null;travauxChecked={};travauxDevis={};realLookupState={elecKwh:null,gazKwh:null,perM2:null,isHybridValid:false,details:"",queryProvided:false};buildScale();toggleTypeFields();calculateDPE();}
+function loadDemo(kind){resetForm();if(kind==="apt-old"){document.getElementById("housingType").value="appartement";document.getElementById("surface").value=48;document.getElementById("year").value=1955;document.getElementById("walls").value="1.18";document.getElementById("roof").value="1.16";document.getElementById("windows").value="1.15";document.getElementById("apartmentFloor").value="1.08";document.getElementById("heating").value="1.18";}if(kind==="apt-top"){document.getElementById("housingType").value="appartement";document.getElementById("surface").value=72;document.getElementById("year").value=1982;document.getElementById("roof").value="1.16";document.getElementById("apartmentFloor").value="1.07";document.getElementById("windows").value="1.00";document.getElementById("heating").value="1.00";}if(kind==="house-solar"){document.getElementById("housingType").value="maison";document.getElementById("surface").value=118;document.getElementById("year").value=2008;document.getElementById("walls").value="0.84";document.getElementById("roof").value="0.82";document.getElementById("floorIns").value="0.88";document.getElementById("windows").value="0.88";document.getElementById("heating").value="0.82";document.getElementById("hotWater").value="18";document.getElementById("solar").value="30";}toggleTypeFields();calculateDPE();}
+buildScale();buildTargetBtns();toggleTypeFields();calculateDPE();
 </script>
 </body>
 </html>
